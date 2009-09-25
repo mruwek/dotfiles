@@ -1,0 +1,78 @@
+##################################################
+# General definitions
+##################################################
+
+[general]
+
+metadata = ~/.offlineimap
+accounts = mruwek,admin
+maxsyncaccounts = 2
+ui = Noninteractive.Basic, TTY.TTYUI,
+     Noninteractive.Quiet, Curses.Blinkenlights
+ignore-readonly = no
+socktimeout = 60
+
+##################################################
+# Mailbox name recorder
+##################################################
+
+[mbnames]
+
+enabled = no
+#filename = ~/.mutt/muttrc.mailboxes
+#header = "mailboxes " 
+#peritem = "=%(accountname)s/%(foldername)s" 
+#sep = " " 
+#footer = "\n" 
+
+[ui.Curses.Blinkenlights]
+
+statuschar = .
+
+##################################################
+# Accounts
+##################################################
+
+[Account mruwek]
+
+localrepository = mruwekLocal
+remoterepository = mruwekRemote
+
+[Account admin]
+
+localrepository = adminLocal
+remoterepository = adminRemote
+
+[Repository mruwekLocal]
+
+type = Maildir
+localfolders = ~/mail
+sep = /
+restoreatime = no
+
+[Repository adminLocal]
+type = Maildir
+localfolders = ~/mail/admin
+sep = /
+restoreatime = no
+
+[Repository mruwekRemote]
+type = IMAP
+remotehost = poczta.email.pl
+ssl = yes
+remoteuser = ---@---.pl
+remotepass = ---
+maxconnections = 1
+holdconnectionopen = no
+nametrans = lambda foldername: re.sub('^INBOX\.', '', foldername)
+
+[Repository adminRemote]
+type = IMAP
+remotehost = poczta.email.pl
+remoteuser = ---@---.pl
+ssl = yes
+remoteuser = ---@---.pl
+remotepass = ---
+maxconnections = 1
+holdconnectionopen = no
+nametrans = lambda foldername: re.sub('^INBOX\.', '', foldername)
