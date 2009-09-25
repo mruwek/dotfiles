@@ -1,0 +1,31 @@
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+Xcursor.theme: Vanilla-DMZ
+
+xterm*background:	black
+xterm*foreground:	white
+xterm*faceName:		DejaVu Sans Mono:pixelsize=13
+
+URxvt.imLocale:			pl_PL.UTF-8
+URxvt.scrollBar:		false
+URxvt.saveLines:		5000
+URxvt.urlLauncher:		firefox
+URxvt.cursorBlink:		true
+URxvt.geometry:			85x21
+URxvt.font:				xft:Dejavu Sans Mono:pixelsize=13
+URxvt.boldFont:			xft:Dejavu Sans Mono:bold:pixelsize=13
+URxvt.background:		#000000
+URxvt.foreground:		#ffffff
+URxvt.tintColor:		#d9d7d1
+URxvt.externalBorder:	.5
+URxvt.borderColor:		#acacac
+
+stjerm.key:			grave
+stjerm.mod:			windows
+stjerm.width:		1152
+stjerm.height:		432
+stjerm.autohide:	false
