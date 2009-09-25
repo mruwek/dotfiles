@@ -1,0 +1,18 @@
+# -*- muttrc -*-
+#
+# Headers display
+
+ignore *
+
+unignore Date
+unignore From
+unignore To
+unignore Cc
+unignore BCC
+unignore Subject
+unignore Organization
+unignore Reply-To
+unignore X-Mailer
+unignore User-Agent
+
+hdr_order From: Subject: To: Cc: BCC: Reply-To: Date:

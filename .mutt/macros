@@ -1,0 +1,34 @@
+# -*- muttrc -*-
+#
+# Macros
+
+# Generic
+macro generic \ca   "<shell-escape>abook<return>"                              "launch abook"
+
+# Index
+macro index   c     "<sync-mailbox><change-folder>?<toggle-mailboxes>"       "open a different folder"
+macro index   A     ":set pipe_decode\n<pipe-message>abook --add-email<return>\
+:unset pipe_decode\n"                                                          "add the sender address to abook"
+macro index   \ca   "<shell-escape>abook<return>"                              "launch abook"
+macro index   C     "<copy-message>?<toggle-mailboxes>"                        "copy a message to a mailbox"
+macro index   M     "<save-message>?<toggle-mailboxes>"                        "move a message to a mailbox"
+macro index   \eR   '<pipe-message>grep "Message-I[dD]:[[:space:]]<.\+>$" -o |\
+grep -o "<.\+>" > /tmp/reply-id && sed -i {s/\\$/\\\\\\\\\\\\$/g} /tmp/reply-id<return>\
+<change-folder>=Sent<return><search>~h `cat /tmp/reply-id`<return><return>'    "show reply"
+
+# Pager
+macro pager   c     "<sync-mailbox><change-folder>?<toggle-mailboxes>"       "open a different folder"
+macro pager   A     ":set pipe_decode\n<pipe-message>abook --add-email<return>\
+:unset pipe_decode\n"                                                          "add the sender address to abook"
+macro pager   \ca   "<shell-escape>abook<return>"                              "launch abook"
+
+macro pager   \eR   '<pipe-message>grep "Message-I[dD]:[[:space:]]<.\+>$" -o |\
+grep -o "<.\+>" > /tmp/reply-id && sed -i {s/\\$/\\\\\\\\\\\\$/g} /tmp/reply-id<return>\
+<change-folder>=Sent<return><search>~h `cat /tmp/reply-id`<return><return>'    "show repLY"
+
+
+message-hook ~A 'macro pager \Cb ":set pipe_decode\n|urlview\n:unset pipe_decode\n" "call urlview ( decoded )"'
+message-hook '~h "Content-type: text/html;"' 'macro pager \Cb "|urlview\n" "call urlview"'
+
+# Browser
+macro browser I     "<shell-escape>offlineimap<enter><tab><tab>"        "offlineimap"

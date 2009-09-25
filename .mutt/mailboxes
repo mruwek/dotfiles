@@ -1,0 +1,20 @@
+# -*- muttrc -*-
+#
+# List of mailboxes
+
+mailboxes =INBOX
+#mailboxes =Kwarantanna
+mailboxes =Sent
+mailboxes =admin
+mailboxes =Sent-admin
+mailboxes =Dorotka
+mailboxes =friends
+mailboxes =Lists/arka
+mailboxes =Lists/wum15grupa
+mailboxes =Lists/wum
+mailboxes =Powiadomienia/mbank
+mailboxes =Powiadomienia/bugi
+mailboxes =Powiadomienia/grono
+mailboxes =Powiadomienia/wykop
+mailboxes =Powiadomienia/allegro
+mailboxes =Powiadomienia/zakupy
