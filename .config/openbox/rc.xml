@@ -101,6 +101,11 @@
         <execute>gmrun</execute>
       </action>
     </keybind>
+    <keybind key="W-c">
+      <action name="execute">
+        <execute>gcalctool</execute>
+      </action>
+    </keybind>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
