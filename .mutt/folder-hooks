@@ -1,6 +1,7 @@
 # -*- muttrc -*-
 #
 # Folder-hooks
+#
 
 # Profiles
 folder-hook . source ~/.mutt/profile.default                      # default profile

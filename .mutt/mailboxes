@@ -1,6 +1,7 @@
 # -*- muttrc -*-
 #
 # List of mailboxes
+#
 
 mailboxes =INBOX
 #mailboxes =Kwarantanna

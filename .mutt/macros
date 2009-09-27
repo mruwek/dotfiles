@@ -1,6 +1,7 @@
 # -*- muttrc -*-
 #
 # Macros
+#
 
 # Generic
 macro generic \ca   "<shell-escape>abook<return>"                              "launch abook"
