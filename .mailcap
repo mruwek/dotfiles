@@ -1,4 +1,4 @@
-text/html;                  elinks %s; needsterminal; description=HTML Text; nametemplate=%s.html
+text/html;                  elinks -eval 'set document.codepage.force_assumed = 1' %s; needsterminal; description=HTML Text; nametemplate=%s.html
 text/html;                  elinks -dump %s; nametemplate=%s.html; copiousoutput
 text/plain;                 needsterminal; copiousoutput;
 image/*;                    xv %s ; test=test -n "$DISPLAY";
