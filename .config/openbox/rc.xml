@@ -561,18 +561,22 @@
       <fullscreen>yes</fullscreen>
       <desktop>3</desktop>
     </application>
-    <application name="evolution">
-      <fullscreen>no</fullscreen>
-      <desktop>2</desktop>
+    <application name="ekg2">
+      <desktop>1</desktop>
+	   <position>
+		  <x>-0</x>
+		  <y>0</y>
+	   </position>
     </application>
     <application name="firefox">
       <desktop>1</desktop>
-	  <maximized>yes</maximized>
+	   <maximized>no</maximized>
+	   <shade>yes</shade>
+	   <position>
+	  	 <x>0</x>
+		 <y>0</y>
+	   </position>
       <decor>no</decor>
-    </application>
-    <application name="liferea-bin">
-      <fullscreen>no</fullscreen>
-      <desktop>2</desktop>
     </application>
     <application name="gajim.py">
       <fullscreen>no</fullscreen>

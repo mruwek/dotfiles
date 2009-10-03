@@ -58,7 +58,7 @@ CLOCK_FORMAT    = "%d %Om A.D. %Y %H:%M"    # Ex: 16 IX A.D. 2009 17:45
 #------------------------------------------------------------------------------
 # Clock Delay: Seconds between each clock update during periods of inactivity
 #------------------------------------------------------------------------------
-CLOCK_DELAY     = 10
+CLOCK_DELAY     = 5
 
 #------------------------------------------------------------------------------
 # Hidden Application List: Apps listed here will not be display on the panel

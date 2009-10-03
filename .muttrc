@@ -20,15 +20,16 @@ set header_cache="~/mail/cache"
 set locale="pl_PL.utf8"
 set send_charset="utf-8"
 unset pipe_decode
+
 set encode_from
-set pager_index_lines=9
-set assumed_charset="latin2"
-set delete=yes
 
 set signature='~/.signature'    # signature file
 my_hdr From: Jacek <--@--.pl>
 my_hdr Reply-To: Jacek <--@--.pl>
 fcc-hook . "=Sent"              # the file to copy sent messages
+
+set pager_index_lines=9
+set assumed_charset="latin2"
 
 # auto_view
 # text/html
@@ -37,6 +38,7 @@ alternative_order text/plain text/html
 set wrap=72
 unset wait_key
 
+set delete=yes
 
 # customize the pager
 bind pager [ previous-line
