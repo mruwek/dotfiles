@@ -568,6 +568,13 @@
 		  <y>0</y>
 	   </position>
     </application>
+    <application name="mutt">
+      <desktop>2</desktop>
+	  <position>
+		  <x>-10</x>
+		  <y>10</y>
+	  </position>
+    </application>
     <application name="firefox">
       <desktop>1</desktop>
 	   <maximized>no</maximized>
