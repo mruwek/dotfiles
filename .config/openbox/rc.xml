@@ -581,7 +581,7 @@
 	   <shade>yes</shade>
 	   <position>
 	  	 <x>0</x>
-		 <y>0</y>
+		<y>10</y>
 	   </position>
       <decor>no</decor>
     </application>
