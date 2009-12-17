@@ -48,7 +48,7 @@
             <item label="Ekg2">
                 <action name="Execute">
                     <execute>
-						urxvtc -name ekg2 -e ~/bin/ekg2-go
+						urxvtc -geometry 60x30 -name ekg2 -e ~/bin/ekg2-go
                     </execute>
                 </action>
             </item>
@@ -84,6 +84,13 @@
             </item>
         </menu>
         <menu id="root-menu-512820" label="Multimedia">
+            <item label="Ncmpcpp">
+                <action name="Execute">
+                    <execute>
+						urxvtc -geometry 90x10 -name ncmpcpp -e ncmpcpp 
+                    </execute>
+                </action>
+            </item>
             <item label="Sonata">
                 <action name="Execute">
                     <execute>
