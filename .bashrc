@@ -32,7 +32,7 @@ alias ..='cd ..'
 alias enman="LANG='en_US.utf8' man"
 alias subdlen='subdl --output="%m_%L.%S" --lang="eng" --interactive'
 alias subdlpl='subdl --output="%m_%L.%S" --lang="pol" --interactive'
-alias mplayerfb='mplayer -vo fbdev -fs -zoom -x 1024 -y 576 -subfont-autoscale 1 -ass -ass-color ffffff00'
+alias mplayerfb='mplayer -vo fbdev -fs -zoom -x 1024 -y 768 -subfont-autoscale 1 -ass -ass-color ffffff00'
 alias forgetgpg='pkill -SIGHUP gpg-agent'
 
 # Finally, time for fun
