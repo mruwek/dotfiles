@@ -10,5 +10,11 @@ if [ -n "$gpgagent" ] && [ -x "$gpgagent" ] && [ -z "$GPG_AGENT_INFO" ] && [ -d 
     export GPG_AGENT_INFO
 fi
 
+if [ -e /var/cache/updates ]; then
+    echo "!!!!!!!!!!!!!!!!!!!!!!!!"
+    echo "!! Zaktualizuj system !!" # in english: 'Update system'
+    echo "!!!!!!!!!!!!!!!!!!!!!!!!"
+fi
+
 # load .bashrc
 . ~/.bashrc
