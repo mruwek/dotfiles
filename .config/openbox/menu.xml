@@ -156,7 +156,19 @@
         </menu>
         <separator/>
         <menu id="50" label="Exitus">
+            <item label="Zablokuj">
+                <action name="Execute">
+                    <execute>
+                        gnome-screensaver-command -l
+                    </execute>
+                </action>
+            </item>
             <item label="Przełącz">
+                <action name="Execute">
+                    <execute>
+                        gnome-screensaver-command -l
+                    </execute>
+                </action>
                 <action name="Execute">
                     <execute>
                         gdm-control --switch-user

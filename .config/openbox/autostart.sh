@@ -1,5 +1,6 @@
 source ~/.bash_profile
-xv -root -quit -max -smooth ~/tapeta.jpg
+xv -root -quit -max -smooth Desktop/tapeta_ninja.jpg
+gnome-screensaver &
 xset r rate 200 40
 pypanel &
 urxvtd -q -f -o &
