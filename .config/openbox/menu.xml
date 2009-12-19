@@ -45,6 +45,13 @@
                     </execute>
                 </action>
             </item>
+            <item label="Empathy">
+                <action name="Execute">
+                    <execute>
+                        empathy
+                    </execute>
+                </action>
+            </item>
             <item label="Ekg2">
                 <action name="Execute">
                     <execute>
@@ -55,7 +62,7 @@
             <item label="rTorrent">
                 <action name="Execute">
                     <execute>
-                        urxvtc -e screen -S rtorrent rtorrent
+                        urxvtc -e ~/bin/rtorrent-go
                     </execute>
                 </action>
             </item>
