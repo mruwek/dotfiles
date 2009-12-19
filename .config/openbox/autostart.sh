@@ -1,4 +1,5 @@
-xv -root -quit -max -smooth foto/DM+JS/2009/02-04/1.jpg
+source ~/.bash_profile
+xv -root -quit -max -smooth ~/tapeta.jpg
 xset r rate 200 40
 pypanel &
 urxvtd -q -f -o &
