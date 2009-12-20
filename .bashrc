@@ -8,8 +8,9 @@ fi
 EDITOR="vim"
 MANPAGER="vimmanpager"
 GPG_TTY=$(tty)				# needed by apps connecting with gpg-agent
+HGEDITOR="hgeditor"
 OOO_FORCE_DESKTOP="gnome"
-export PATH LANG LC_COLLATE TERM EDITOR MANPAGER OOO_FORCE_DESKTOP GPG_TTY
+export PATH LANG LC_COLLATE TERM EDITOR MANPAGER OOO_FORCE_DESKTOP HGEDITOR GPG_TTY
 
 # Bash hacks
 ## Prompt
