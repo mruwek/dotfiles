@@ -592,13 +592,13 @@
         <application name="mutt">
             <desktop>2</desktop>
             <position>
-                <x>-10</x>
+                <x>-0</x>
                 <y>10</y>
             </position>
         </application>
         <application name="firefox">
             <desktop>1</desktop>
-            <maximized>no</maximized>
+            <maximized>vertical</maximized>
             <shade>yes</shade>
             <position>
                 <x>0</x>
