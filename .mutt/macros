@@ -5,6 +5,7 @@
 
 # Generic
 macro generic \ca   "<shell-escape>abook<return>"                              "launch abook"
+macro generic I     "<shell-escape>offlineimap<enter>"                         "offlineimap"
 
 # Index
 macro index   c     "<sync-mailbox><change-folder>?<toggle-mailboxes>"       "open a different folder"
