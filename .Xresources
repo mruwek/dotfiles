@@ -26,6 +26,6 @@ URxvt.borderColor:		#acacac
 
 stjerm.key:			grave
 stjerm.mod:			windows
-stjerm.width:		1152
-stjerm.height:		432
+stjerm.width:		1600
+stjerm.height:		430
 stjerm.autohide:	false
