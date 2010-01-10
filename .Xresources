@@ -8,7 +8,8 @@ Xcursor.theme: Vanilla-DMZ
 
 xterm*background:	black
 xterm*foreground:	white
-xterm*faceName:		DejaVu Sans Mono:pixelsize=13
+xterm*faceName:		Terminus
+xterm*faceSize:     14
 
 URxvt.imLocale:			pl_PL.UTF-8
 URxvt.scrollBar:		false
@@ -16,8 +17,8 @@ URxvt.saveLines:		5000
 URxvt.urlLauncher:		firefox
 URxvt.cursorBlink:		true
 URxvt.geometry:			85x21
-URxvt.font:				xft:Dejavu Sans Mono:pixelsize=13
-URxvt.boldFont:			xft:Dejavu Sans Mono:bold:pixelsize=13
+URxvt.font:				xft:Terminus:pixelsize=16
+URxvt.boldFont:			xft:Terminus:bold:pixelsize=16
 URxvt.background:		#000000
 URxvt.foreground:		#ffffff
 URxvt.tintColor:		#d9d7d1
@@ -29,3 +30,4 @@ stjerm.mod:			windows
 stjerm.width:		1600
 stjerm.height:		430
 stjerm.autohide:	false
+stjerm.font:        Terminus 14
