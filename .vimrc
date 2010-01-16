@@ -142,7 +142,7 @@ map <C-l> <C-w>l
 
 
 " Use CTRL-F for omni completion
-imap <C-F> 
+imap <C-f> <C-o><C-x>
 
 " Map CTRL-L to piece-wise copying of the line above the current one
 imap <C-L> @@@<ESC>hhkywjl?@@@<CR>P/@@@<CR>3s
