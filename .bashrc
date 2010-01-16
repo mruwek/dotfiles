@@ -30,6 +30,7 @@ export HISTSIZE HISCTCONTROL HISTIGNORE
 
 # Useful aliases
 alias ..='cd ..'
+alias ll='ls -l'
 alias enman="LANG='en_US.utf8' man"
 alias subdlen='subdl --output="%m_%L.%S" --lang="eng" --interactive'
 alias subdlpl='subdl --output="%m_%L.%S" --lang="pol" --interactive'
