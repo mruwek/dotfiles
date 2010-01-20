@@ -31,7 +31,7 @@ export HISTSIZE HISCTCONTROL HISTIGNORE
 # Useful aliases
 alias ..='cd ..'
 alias ll='ls -l'
-alias enman="LANG='en_US.utf8' man"
+alias enman="LANG='en_US.utf8' man" && complete -F _man -o filenames enman
 alias subdlen='subdl --output="%m_%L.%S" --lang="eng" --interactive'
 alias subdlpl='subdl --output="%m_%L.%S" --lang="pol" --interactive'
 alias mplayerfb='mplayer -vo fbdev -fs -zoom -x 1024 -y 768 -subfont-autoscale 1 -ass -ass-color ffffff00'
