@@ -1,5 +1,5 @@
 source ~/.bash_profile
-xv -root -quit -max -smooth Desktop/tapeta_ninja.jpg
+xv -root -max -smooth -quit -random haha/tapety/NG/*.jpg
 gnome-screensaver &
 xset r rate 200 40
 pypanel &
