@@ -91,6 +91,13 @@
         <moveButton>Middle</moveButton>
     </dock>
     <keyboard>
+        <keybind key="XF86PowerOff">
+            <action name="execute">
+                <execute>
+                    sudo hibernate-ram
+                </execute>
+            </action>
+        </keybind>
         <keybind key="A-F1">
             <action name="ShowMenu">
                 <menu>root-menu</menu>
@@ -101,9 +108,39 @@
                 <execute>gmrun</execute>
             </action>
         </keybind>
-        <keybind key="W-c">
+        <keybind key="W-y">
             <action name="execute">
-                <execute>gcalctool</execute>
+                <execute>urxvtc -geometry 1x1 -e /home/jacek/bin/przytnij</execute>
+            </action>
+        </keybind>
+        <keybind key="W-j">
+            <action name="execute">
+                <execute>urxvtc -geometry 1x1 -e /home/jacek/bin/jojtub</execute>
+            </action>
+        </keybind>
+        <keybind key="C-W-p">
+            <action name="execute">
+                <execute>ncmpcpp toggle</execute>
+            </action>
+        </keybind>
+        <keybind key="C-W-h">
+            <action name="execute">
+                <execute>ncmpcpp prev</execute>
+            </action>
+        </keybind>
+        <keybind key="C-W-j">
+            <action name="execute">
+                <execute>ncmpcpp volume -1</execute>
+            </action>
+        </keybind>
+        <keybind key="C-W-k">
+            <action name="execute">
+                <execute>ncmpcpp volume +1</execute>
+            </action>
+        </keybind>
+        <keybind key="C-W-l">
+            <action name="execute">
+                <execute>ncmpcpp next</execute>
             </action>
         </keybind>
         <chainQuitKey>C-g</chainQuitKey>
@@ -199,6 +236,24 @@
         </keybind>
         <keybind key="W-Left">
             <action name="MoveToEdgeWest" />
+        </keybind>
+        <keybind key="W-Up">
+            <action name="MoveToEdgeNorth" />
+        </keybind>
+        <keybind key="W-Down">
+            <action name="MoveToEdgeSouth" />
+        </keybind>
+        <keybind key="C-Right">
+            <action name="GrowToEdgeEast"/>
+        </keybind>
+        <keybind key="C-Left">
+            <action name="GrowToEdgeWest" />
+        </keybind>
+        <keybind key="C-Up">
+            <action name="GrowToEdgeNorth" />
+        </keybind>
+        <keybind key="C-Down">
+            <action name="GrowToEdgeSouth" />
         </keybind>
         <keybind key="W-r">
             <action name="Resize" />
@@ -593,7 +648,7 @@
             <desktop>2</desktop>
             <position>
                 <x>-0</x>
-                <y>10</y>
+                <y>90</y>
             </position>
         </application>
         <application name="firefox">
@@ -608,7 +663,7 @@
         </application>
         <application name="gajim.py">
             <fullscreen>no</fullscreen>
-            <desktop>2</desktop>
+            <desktop>1</desktop>
         </application>
         <application class="URxvt">
             <decor>no</decor>

@@ -1,7 +1,8 @@
 source ~/.bash_profile
 xv -root -max -smooth -quit -random haha/tapety/NG/*.jpg
 gnome-screensaver &
-xset r rate 200 40
+xset r rate 200 90
+xset -b
 pypanel &
 urxvtd -q -f -o &
 stjerm &

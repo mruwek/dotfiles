@@ -4,7 +4,7 @@
         <item label="Urxvt">
             <action name="Execute">
                 <execute>
-                    urxvtc
+                    urxvtc -pe tabbed
                 </execute>
             </action>
         </item>
@@ -34,7 +34,7 @@
             <item label="Mutt">
                 <action name="Execute">
                     <execute>
-                        urxvtc -name mutt -geometry 100x45 -e mutt -y
+                        urxvtc -name mutt -geometry 100x45 -e mutt
                     </execute>
                 </action>
             </item>
@@ -186,27 +186,31 @@
                 <action name="Exit"/>
             </item>
             <separator/>
+            <item label="Wstrzymaj">
+                <action name="Execute">
+                    <execute>
+                       sudo hibernate-ram 
+                    </execute>
+                </action>
+            </item>
+            <item label="Hibernuj">
+                <action name="Execute">
+                    <execute>
+                        sudo /usr/sbin/hibernate
+                    </execute>
+                </action>
+            </item>
             <item label="Restart">
                 <action name="Execute">
                     <execute>
-                        gdm-control --reboot
-                    </execute>
-                </action>
-                <action name="Execute">
-                    <execute>
-                        openbox --exit
+                        ~/bin/shutdown.sh reboot
                     </execute>
                 </action>
             </item>
             <item label="Wyłącz">
                 <action name="Execute">
                     <execute>
-                        gdm-control --shutdown
-                    </execute>
-                </action>
-                <action name="Execute">
-                    <execute>
-                        openbox --exit
+                        ~/bin/shutdown.sh poweroff
                     </execute>
                 </action>
             </item>
