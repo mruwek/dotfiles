@@ -1,0 +1,37 @@
+[ui]
+username = ... <-@->
+ssh = ssh -C
+merge =vimdiff
+
+[merge-tools]
+vimdiff.args = $output $other
+
+[extensions]
+bookmarks =
+color =
+mq =
+record =
+graphlog =
+hgk =
+pager =
+hggit =
+convert =
+rebase =
+
+[bookmarks]
+track.current = True
+
+[color]
+diff.diffline = none
+diff.file_a = none
+status.modified = magenta bold
+status.added = green bold
+status.removed = red bold
+status.deleted = cyan bold
+status.unknown = blue bold
+status.ignored = black bold
+
+[pager]
+pager = LESS='FSRX' more
+attend = annotate, diff, glog, log, incoming
+
