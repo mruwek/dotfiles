@@ -17,4 +17,6 @@ if [ -e /var/cache/updates ]; then
 fi
 
 # load .bashrc
-. ~/.bashrc
+if [[ -n $PS1 ]]; then
+    . ~/.bashrc
+fi
