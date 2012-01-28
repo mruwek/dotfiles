@@ -5,5 +5,17 @@ image/*;                    xv %s ; test=test -n "$DISPLAY";
 image/*;					fbi %s; needsterminal;
 application/pdf;            evince '%s'; test=test -n "$DISPLAY";
 application/pdf;            fbgs -a -c %s; needsterminal;
-application/msword;         soffice '%s'; test=test "$DISPLAY" != "" ; description="Doc file" ; nametemplate=%s.doc
-application/vnd.ms-excel;   soffice '%s'; test=test "$DISPLAY" != "" ; description="XLS file" ; nametemplate=%s.xls
+application/msword;         soffice '%s'; test=test "$DISPLAY" != "" ; description="MS word file" ; nametemplate=%s.doc
+application/vnd.ms-excel;   soffice '%s'; test=test "$DISPLAY" != "" ; description="MS excel file" ; nametemplate=%s.xls
+application/vnd.ms-powerpoint;   soffice '%s'; test=test "$DISPLAY" != "" ; description="MS powerpoint file" ; nametemplate=%s.doc
+
+application/vnd.oasis.opendocument.text;            soffice '%s'; test=test "$DISPLAY" != "" ; description="OpenDocument text file"
+application/vnd.oasis.opendocument.presentation;    soffice '%s'; test=test "$DISPLAY" != "" ; description="OpenDocument presentation file"
+application/vnd.oasis.opendocument.spreadsheet;     soffice '%s'; test=test "$DISPLAY" != "" ; description="OpenDocument spreadsheet file"
+
+application/vnd.openxmlformats-officedocument.wordprocessingml.document;    soffice '%s'; test=test "$DISPLAY" != "" ; description="MS docx file"
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;          soffice '%s'; test=test "$DISPLAY" != "" ; description="MS xlsx file"
+application/vnd.openxmlformats-officedocument.presentationml.presentation;  soffice '%s'; test=test "$DISPLAY" != "" ; description="MS pptx file"
+application/vnd.openxmlformats-officedocument.presentationml.slideshow;     soffice '%s'; test=test "$DISPLAY" != "" ; description="MS ppsx file"
+
+audio/mpeg;                 mplayer %s

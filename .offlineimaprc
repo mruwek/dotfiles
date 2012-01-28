@@ -5,12 +5,12 @@
 [general]
 
 metadata = ~/.offlineimap
-accounts = mruwek,admin
-maxsyncaccounts = 2
-ui = Noninteractive.Basic, TTY.TTYUI,
-     Noninteractive.Quiet, Curses.Blinkenlights
+accounts = poczta
+maxsyncaccounts = 3
+ui = Basic
 ignore-readonly = no
 socktimeout = 60
+maxconnections = 3
 
 ##################################################
 # Mailbox name recorder
@@ -25,7 +25,7 @@ enabled = no
 #sep = " " 
 #footer = "\n" 
 
-[ui.Curses.Blinkenlights]
+ui = Noninteractive.Basic
 
 statuschar = .
 
@@ -33,46 +33,24 @@ statuschar = .
 # Accounts
 ##################################################
 
-[Account mruwek]
+[Account poczta]
+localrepository = pocztaLocal
+remoterepository = pocztaRemote
 
-localrepository = mruwekLocal
-remoterepository = mruwekRemote
-
-[Account admin]
-
-localrepository = adminLocal
-remoterepository = adminRemote
-
-[Repository mruwekLocal]
-
+[Repository pocztaLocal]
 type = Maildir
 localfolders = ~/mail
 sep = /
 restoreatime = no
 
-[Repository adminLocal]
-type = Maildir
-localfolders = ~/mail/admin
-sep = /
-restoreatime = no
-
-[Repository mruwekRemote]
+[Repository pocztaRemote]
 type = IMAP
+status_backend = sqlite
 remotehost = poczta.email.pl
 ssl = yes
+remoteport = 993
 remoteuser = ---@---.pl
 remotepass = ---
-maxconnections = 1
+maxconnections = 3
 holdconnectionopen = no
-nametrans = lambda foldername: re.sub('^INBOX\.', '', foldername)
-
-[Repository adminRemote]
-type = IMAP
-remotehost = poczta.email.pl
-remoteuser = ---@---.pl
-ssl = yes
-remoteuser = ---@---.pl
-remotepass = ---
-maxconnections = 1
-holdconnectionopen = no
-nametrans = lambda foldername: re.sub('^INBOX\.', '', foldername)
+nametrans = lambda foldername: re.sub('^Drafts', '_Robocze', re.sub('^Trash', '_Kosz', (re.sub('^Sent', '_Wysłane', re.sub('^INBOX', '_Odebrane', foldername)))))

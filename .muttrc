@@ -3,8 +3,11 @@
 # rc file for mutt
 
 set mbox_type=Maildir
-set spoolfile="~/mail/
-set folder="~/mail/"
+set spoolfile="imaps://-@-/INBOX"
+set folder="imaps://-@-"
+set imap_pass="***"
+#set spoolfile="~/mail/
+#set folder="~/mail/"
 set mask="!^\\.[^.]"
 set record="=Sent"
 set postponed="=Drafts"
@@ -13,10 +16,12 @@ set nobeep
 set edit_headers
 set date_format="%d.%m.%Y %H:%M"
 set index_format="%2C %Z |%d| %-15.15F (%?l?%4l&%4c?) %s"
+set forward_format="Fwd: %s"
 set sendmail="/usr/bin/msmtp"
 set use_from=yes
 set envelope_from=yes
-set header_cache="~/mail/cache"
+set header_cache="~/mail/cache/"
+set message_cachedir="~/mail/cache/"
 set locale="pl_PL.utf8"
 set send_charset="utf-8"
 unset pipe_decode
@@ -31,26 +36,26 @@ fcc-hook . "=Sent"              # the file to copy sent messages
 set pager_index_lines=9
 set assumed_charset="latin2"
 
-# auto_view
 # text/html
 set implicit_autoview
 alternative_order text/plain text/html
-set wrap=72
+set wrap=80
 unset wait_key
 
 set delete=yes
 
 # customize the pager
-bind pager [ previous-line
-bind pager ] next-line
+bind pager K previous-line
+bind pager J next-line
 
 # threading
 set sort=threads
+set sort_aux=last-date-sent
 
 set query_command = "abook --mutt-query %s"
 #set query_command = "lbdbq '%s'"
 
-source ~/.mutt/mailboxes
+#source ~/.mutt/mailboxes
 source ~/.mutt/headers
 source ~/.mutt/folder-hooks
 source ~/.mutt/lists
