@@ -20,16 +20,22 @@ URxvt.scrollBar:        false
 URxvt.saveLines:        5000
 URxvt.urlLauncher:      firefox
 URxvt.cursorBlink:      true
+URxvt.borderLess:       true
 URxvt.geometry:         85x21
 URxvt.font:             xft:Terminus:pixelsize=16
 URxvt.boldFont:         xft:Terminus:bold:pixelsize=16
 URxvt.background:       #000000
 URxvt.foreground:       #ffffff
 URxvt.tintColor:        #d9d7d1
-URxvt.externalBorder:   .5
-URxvt.borderColor:      #acacac
-URxvt.termName:         rxvt-unicode256
+URxvt.externalBorder:   0px
+URxvt.borderColor:      #ffffff
+URxvt.termName:         rxvt-unicode-256color
 URxvt.perl-ext:         default,matcher
+URxvt.tabbed.tabbar-fg: 5
+URxvt.tabbed.tabbar-bg: 48
+URxvt.tabbed.tab-fg:    14
+URxvt.tabbed.tab-bg:    35
+URxvt.tabbed.new-button: false
 URxvt.matcher.button:   1
 URxvt.fading:           60
 
