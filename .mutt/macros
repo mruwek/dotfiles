@@ -3,6 +3,9 @@
 # Macros
 #
 
+# Editor
+bind editor <Tab> complete-query
+
 # Generic
 macro generic \ca   "<shell-escape>abook<return>"                              "launch abook"
 macro generic I     "<shell-escape>offlineimap<enter>"                         "offlineimap"
