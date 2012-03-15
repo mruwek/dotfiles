@@ -56,6 +56,8 @@ set sort=threads
 set sort_aux=last-date-sent
 
 set query_command = "abook --mutt-query %s"
+set query_command = "goobook query %s"
+#set query_command = "google contacts list '(?i).*%s'"
 #set query_command = "lbdbq '%s'"
 
 #source ~/.mutt/mailboxes
