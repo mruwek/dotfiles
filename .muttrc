@@ -35,6 +35,9 @@ set signature='~/.signature'    # signature file
 my_hdr From: Jacek <--@--.pl>
 my_hdr Reply-To: Jacek <--@--.pl>
 fcc-hook . "=Sent"              # the file to copy sent messages
+alternates "(jss|mruwek|jacek|hs)@mruwek.pl"
+alternates "mruwek@(gmail.com|vcf.pl)"
+set metoo=no
 
 set pager_index_lines=9
 set assumed_charset="latin2"
