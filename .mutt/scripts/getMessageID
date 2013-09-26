@@ -1,0 +1,2 @@
+#!/bin/bash
+grep "Message-[iI][dD]:[[:space:]]<.\+>$" -o /dev/stdin | grep -o "<.\+>" | sed "s/\\$/\\\\$/g;s/\\+/\\\+/g;" > /tmp/reply-id

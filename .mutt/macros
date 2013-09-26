@@ -21,9 +21,8 @@ macro index    a    "<pipe-message>goobook add<return>" "Add sender's address to
 #macro index   M     "<save-message>?<toggle-mailboxes>"                        "move a message to a mailbox"
 macro index   C     "<copy-message>?" "copy a message to a mailbox"
 macro index   M     "<save-message>?" "move a message to a mailbox"
-macro index   \eR   '<pipe-message>grep "Message-I[dD]:[[:space:]]<.\+>$" -o |\
-grep -o "<.\+>" > /tmp/reply-id && sed -i {s/\\$/\\\\\\\\\\\\$/g} /tmp/reply-id<return>\
-<change-folder>=Sent<return><search>~h `cat /tmp/reply-id`<return><return>'    "show reply"
+folder-hook . "macro index   \eR   '<pipe-message>~/.mutt/scripts/getMessageID<return><change-folder>=Sent<return><search>~x \"\`cat /tmp/reply-id\`\"<return>'   'show reply'"
+folder-hook Sent "macro index   \eR   '<change-folder>=<return><search>~i \"\`cat /tmp/reply-id\`\"<return>'    'show reply'"
 
 # Pager
 #macro pager   c     "<sync-mailbox><change-folder>?<toggle-mailboxes>"       "open a different folder"
@@ -31,10 +30,8 @@ grep -o "<.\+>" > /tmp/reply-id && sed -i {s/\\$/\\\\\\\\\\\\$/g} /tmp/reply-id<
 macro pager   a     "<pipe-message>goobook add<return>" "Add sender's address to your Google contacts"
 #macro pager   \ca   "<shell-escape>abook<return>" "launch abook"
 #macro pager  I     "<shell-escape>offlineimap<enter>"                         "offlineimap"
-macro pager   \eR   '<pipe-message>grep "Message-I[dD]:[[:space:]]<.\+>$" -o |\
-grep -o "<.\+>" > /tmp/reply-id && sed -i {s/\\$/\\\\\\\\\\\\$/g} /tmp/reply-id<return>\
-<change-folder>=Sent<return><search>~h `cat /tmp/reply-id`<return><return>'    "show repLY"
-
+folder-hook . "macro pager   \eR   '<pipe-message>~/.mutt/scripts/getMessageID<return><change-folder>=Sent<return><search>~x \"\`cat /tmp/reply-id\`\"<return><return>'    'show reply'"
+folder-hook Sent "macro pager   \eR   '<change-folder>=<return><search>~i \"\`cat /tmp/reply-id\`\"<return><return>'    'show reply'"
 
 message-hook ~A 'macro pager \Cb ":set pipe_decode\n|urlview\n:unset pipe_decode\n" "call urlview ( decoded )"'
 message-hook '~h "Content-type: text/html;"' 'macro pager \Cb "|urlview\n" "call urlview"'
