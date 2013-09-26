@@ -14,7 +14,7 @@ set imap_keepalive=300
 set mask="!^\\.[^.]"
 set record="=Sent"
 set postponed="=Drafts"
-set editor="vim"
+set editor="vim -u ~/.mutt/vimrc"
 set nobeep
 set edit_headers
 set date_format="%d.%m.%Y %H:%M"
