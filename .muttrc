@@ -47,6 +47,8 @@ set implicit_autoview
 auto_view text/html
 alternative_order text/plain text/html
 set wrap=80
+unset markers
+set smart_wrap
 unset wait_key
 
 set delete=yes
