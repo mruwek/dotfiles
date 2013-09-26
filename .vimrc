@@ -10,7 +10,7 @@ filetype plugin on
 filetype indent on
 
 " Turn syntax highlighting on
-colorscheme zenburn
+colorscheme desert
 syntax on
 
 "
@@ -153,7 +153,7 @@ nmap ,f [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
 " Use ,s to convert spaces after one-letter prepositions and conjunctions to
 " nobreakable ones
-nmap ,s :%s:\(\_^\\|[ („]\)\([aAiIoOuUwWzZ]\) :\1\2<Char-0xa0>:g<CR>
+nmap ,s J:%s:\(\_^\\|[ („]\)\([aAiIoOuUwWzZ]\) :\1\2<Char-0xa0>:g<CR>gqap
 
 " Use <F6> to toggle line numbers
 nmap <silent> <F6> :set number!<CR>
