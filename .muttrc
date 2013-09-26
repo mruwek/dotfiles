@@ -3,8 +3,8 @@
 # rc file for mutt
 
 set mbox_type=Maildir
-set spoolfile="imaps://-@-/INBOX"
-set folder="imaps://-@-"
+set spoolfile=imaps://-@-/INBOX
+set folder=imaps://-@-
 set imap_pass="***"
 set timeout=20
 set mail_check=60

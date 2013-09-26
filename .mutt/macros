@@ -2,16 +2,16 @@
 #
 # Macros
 #
+### macros for offlineimap approach are commented
 
 # Editor
 bind editor <Tab> complete-query
 
 # Generic
 macro generic \ca   "<shell-escape>abook<return>"                              "launch abook"
-macro generic I     "<shell-escape>offlineimap<enter>"                         "offlineimap"
+#macro generic I     "<shell-escape>offlineimap<enter>"                         "offlineimap"
 
 # Index
-### macros for offlineimap approach are commented
 #macro index   c     "<sync-mailbox><change-folder>?<toggle-mailboxes>"       "open a different folder"
 macro index   A     ":set pipe_decode\n<pipe-message>abook --add-email<return>\
 :unset pipe_decode\n"                                                          "add the sender address to abook"
@@ -19,19 +19,19 @@ macro index    a    "<pipe-message>goobook add<return>" "Add sender's address to
 macro index   \ca   "<shell-escape>abook<return>"                              "launch abook"
 #macro index   C     "<copy-message>?<toggle-mailboxes>"                        "copy a message to a mailbox"
 #macro index   M     "<save-message>?<toggle-mailboxes>"                        "move a message to a mailbox"
-macro index   C     "<copy-message>?"                        "copy a message to a mailbox"
-macro index   M     "<save-message>?"                        "move a message to a mailbox"
+macro index   C     "<copy-message>?" "copy a message to a mailbox"
+macro index   M     "<save-message>?" "move a message to a mailbox"
 macro index   \eR   '<pipe-message>grep "Message-I[dD]:[[:space:]]<.\+>$" -o |\
 grep -o "<.\+>" > /tmp/reply-id && sed -i {s/\\$/\\\\\\\\\\\\$/g} /tmp/reply-id<return>\
 <change-folder>=Sent<return><search>~h `cat /tmp/reply-id`<return><return>'    "show reply"
 
 # Pager
-macro pager   c     "<sync-mailbox><change-folder>?<toggle-mailboxes>"       "open a different folder"
+#macro pager   c     "<sync-mailbox><change-folder>?<toggle-mailboxes>"       "open a different folder"
 macro pager   A     ":set pipe_decode\n<pipe-message>abook --add-email<return>\
 :unset pipe_decode\n"                                                          "add the sender address to abook"
 macro pager   a     "<pipe-message>goobook add<return>" "Add sender's address to your Google contacts"
 macro pager   \ca   "<shell-escape>abook<return>"                              "launch abook"
-macro pager I     "<shell-escape>offlineimap<enter>"                         "offlineimap"
+#macro pager I     "<shell-escape>offlineimap<enter>"                         "offlineimap"
 
 macro pager   \eR   '<pipe-message>grep "Message-I[dD]:[[:space:]]<.\+>$" -o |\
 grep -o "<.\+>" > /tmp/reply-id && sed -i {s/\\$/\\\\\\\\\\\\$/g} /tmp/reply-id<return>\
