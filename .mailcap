@@ -1,21 +1,29 @@
 text/html;                  elinks %s; needsterminal; description=HTML Text; nametemplate=%s.html
 text/html;                  elinks -dump %s; nametemplate=%s.html; copiousoutput
 text/plain;                 needsterminal; copiousoutput;
-image/*;                    xv %s ; test=test -n "$DISPLAY";
+image/*;                    eog %s ; test=test -n "$DISPLAY";
 image/*;					fbi %s; needsterminal;
 application/pdf;            evince '%s'; test=test -n "$DISPLAY";
 application/pdf;            fbgs -a -c %s; needsterminal;
+
 application/msword;         soffice '%s'; test=test "$DISPLAY" != "" ; description="MS word file" ; nametemplate=%s.doc
 application/vnd.ms-excel;   soffice '%s'; test=test "$DISPLAY" != "" ; description="MS excel file" ; nametemplate=%s.xls
 application/vnd.ms-powerpoint;   soffice '%s'; test=test "$DISPLAY" != "" ; description="MS powerpoint file" ; nametemplate=%s.doc
-
-application/vnd.oasis.opendocument.text;            soffice '%s'; test=test "$DISPLAY" != "" ; description="OpenDocument text file"
-application/vnd.oasis.opendocument.presentation;    soffice '%s'; test=test "$DISPLAY" != "" ; description="OpenDocument presentation file"
-application/vnd.oasis.opendocument.spreadsheet;     soffice '%s'; test=test "$DISPLAY" != "" ; description="OpenDocument spreadsheet file"
-
 application/vnd.openxmlformats-officedocument.wordprocessingml.document;    soffice '%s'; test=test "$DISPLAY" != "" ; description="MS docx file"
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;          soffice '%s'; test=test "$DISPLAY" != "" ; description="MS xlsx file"
 application/vnd.openxmlformats-officedocument.presentationml.presentation;  soffice '%s'; test=test "$DISPLAY" != "" ; description="MS pptx file"
 application/vnd.openxmlformats-officedocument.presentationml.slideshow;     soffice '%s'; test=test "$DISPLAY" != "" ; description="MS ppsx file"
+application/vnd.oasis.opendocument.text;            soffice '%s'; test=test "$DISPLAY" != "" ; description="OpenDocument text file"
+application/vnd.oasis.opendocument.text-master; soffice --global '%s'; edit=soffice --writer '%s'; print=soffice --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Master Document"; nametemplate=%s.odm
+application/vnd.oasis.opendocument.text-template; soffice --writer '%s'; edit=soffice --writer '%s'; print=soffice --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Text Document Template"; nametemplate=%s.ott
+application/vnd.oasis.opendocument.text-web; soffice --web '%s'; edit=soffice --web '%s'; print=soffice --web -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument HTML Document Template"; nametemplate=%s.oth
+application/vnd.oasis.opendocument.presentation;    soffice '%s'; test=test "$DISPLAY" != "" ; description="OpenDocument presentation file"
+application/vnd.oasis.opendocument.presentation-template; soffice --impress '%s'; edit=soffice --impress '%s'; print=soffice --impress -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Presentation Template"; nametemplate=%s.otp
+application/vnd.oasis.opendocument.spreadsheet;     soffice '%s'; test=test "$DISPLAY" != "" ; description="OpenDocument spreadsheet file"
+application/vnd.oasis.opendocument.spreadsheet-template; soffice --calc '%s'; edit=soffice --calc '%s'; print=soffice --calc -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Spreadsheet Template"; nametemplate=%s.ots
+application/vnd.oasis.opendocument.chart; soffice --calc '%s'; edit=soffice --calc '%s'; print=soffice --calc -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Chart"; nametemplate=%s.odc
+application/vnd.oasis.opendocument.graphics; soffice --draw '%s'; edit=soffice --draw '%s'; print=soffice --draw -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Drawing"; nametemplate=%s.odg
+application/vnd.oasis.opendocument.graphics-template; soffice --draw '%s'; edit=soffice --draw '%s'; print=soffice --draw -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Drawing Template"; nametemplate=%s.otg
+application/vnd.oasis.opendocument.formula; soffice --math '%s'; edit=soffice --math '%s'; print=soffice --math -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Formula"; nametemplate=%s.odf
 
 audio/mpeg;                 mplayer %s
