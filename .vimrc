@@ -4,6 +4,22 @@
 
 " Turn Vim super-powers on
 set nocompatible
+" set the runtime path to include Vundle and initialize
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'godlygeek/tabular'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'matchit.zip'
+Plugin 'python_match.vim'
+Plugin 'ludovicchabant/vim-lawrencium'
+
+call vundle#end()
 
 " Enable loading filetype and indentation plugin
 filetype plugin on
