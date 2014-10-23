@@ -4,6 +4,11 @@
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
+
+# User specific aliases and functions
+
+## Essential variables
+
 EDITOR="vim"
 GPG_TTY=$(tty)				# needed by apps connecting with gpg-agent
 HGEDITOR="hgeditor"
@@ -18,7 +23,7 @@ HISTSIZE=1000
 HISTCONTROL='ignoreboth:erasedups'
 export HISTSIZE HISCTCONTROL
 
-# Useful aliases
+## Useful aliases
 alias ..='cd ..'
 alias gpg='gpg2'
 alias lss='ls -sS'
@@ -30,7 +35,7 @@ alias la='ls -A'
 alias enman="LANG='en_US.utf8' man" && complete -F _man -o filenames enman
 alias forgetgpg='pkill -SIGHUP gpg-agent'
 
-#todo.sh
+## todo.sh
 if [[ $TERM == "linux" ]]; then
     alias todo="todo.sh -d .todo/config-vte"
 else
