@@ -1,0 +1,15 @@
+actions:
+    add      --> todo.txt-tools
+    do       --> todo.txt-tools
+    dorec    --> moje rozwinięcie todo.txt-tools
+    edit     --> todo.txt-cli@dhein
+    postpone --> todo.txt-tools
+    pri      --> todo.txt-cli@tonipenya
+    revive   --> todo.txt-revive
+    rm       --> todo.txt-cli@tonipenya
+    schedule --> todo.txt-cli@FND
+
+filters:
+    futureTasks         --> todo.txt-cli@FND
+    filter-relevance.pl --> todo.txt-tools
+    sort.pl             --> todo.txt-tools
