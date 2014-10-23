@@ -29,5 +29,5 @@ status.unknown = blue bold
 status.ignored = black bold
 
 [pager]
-pager = LESS='FSRX' more
+pager = LESS='FSRX' less
 attend = annotate, diff, glog, log, incoming, help
