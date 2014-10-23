@@ -1,22 +1,16 @@
-gpgagent="`which gpg-agent 2>/dev/null`"
-if [ -n "$gpgagent" ] && [ -x "$gpgagent" ] && [ -z "$GPG_AGENT_INFO" ] && [ -d "$HOME/.gnupg" ]; then
-    if ! test -r "$HOME"/.gpg-agent-info || 
-        ! kill -0 $(cut -d: -f 2 "$HOME"/.gpg-agent-info) 2>/dev/null
-    then
-        # should I add --batch option ?
-        "$gpgagent" --daemon --write-env-file "$HOME"/.gpg-agent-info &> /dev/null
-    fi
-    GPG_AGENT_INFO=$(cut -d= -f 2- "$HOME"/.gpg-agent-info) 2>/dev/null
-    export GPG_AGENT_INFO
+# .bash_profile
+
+if [ $TERM == "linux" ]; then
+    setfont ter-216n
 fi
 
-if [ -e /var/cache/updates ]; then
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!"
-    echo "!! Zaktualizuj system !!" # in english: 'Update system'
-    echo "!!!!!!!!!!!!!!!!!!!!!!!!"
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
 fi
 
-# load .bashrc
-if [[ -n $PS1 ]]; then
-    . ~/.bashrc
-fi
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.cabal/bin
+
+export PATH
