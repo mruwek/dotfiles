@@ -30,6 +30,9 @@ set background=dark
 colorscheme solarized
 syntax on
 
+" set lang to pl
+set spelllang=pl
+
 "
 " GLOBAL SETTINGS
 "
