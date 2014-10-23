@@ -16,7 +16,7 @@ pager =
 hggit =
 convert =
 rebase =
-
+histedit =
 
 [color]
 diff.diffline = none
