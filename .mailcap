@@ -25,5 +25,6 @@ application/vnd.oasis.opendocument.chart; soffice --calc '%s'; edit=soffice --ca
 application/vnd.oasis.opendocument.graphics; soffice --draw '%s'; edit=soffice --draw '%s'; print=soffice --draw -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Drawing"; nametemplate=%s.odg
 application/vnd.oasis.opendocument.graphics-template; soffice --draw '%s'; edit=soffice --draw '%s'; print=soffice --draw -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Drawing Template"; nametemplate=%s.otg
 application/vnd.oasis.opendocument.formula; soffice --math '%s'; edit=soffice --math '%s'; print=soffice --math -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Formula"; nametemplate=%s.odf
-
+application/vnd.oasis.opendocument.text-web; soffice --web '%s'; edit=soffice --web '%s'; print=soffice --web -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument HTML Document Template"; nametemplate=%s.oth
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; soffice --writer '%s'; edit=soffice --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Document"; nametemplate=%s.docx
 audio/mpeg;                 mplayer %s
