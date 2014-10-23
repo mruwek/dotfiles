@@ -7,7 +7,6 @@ merge =vimdiff
 vimdiff.args = $output $other
 
 [extensions]
-bookmarks =
 color =
 mq =
 record =
@@ -18,8 +17,6 @@ hggit =
 convert =
 rebase =
 
-[bookmarks]
-track.current = True
 
 [color]
 diff.diffline = none
