@@ -33,6 +33,9 @@ syntax on
 " set lang to pl
 set spelllang=pl
 
+" load local .vimrc files
+set exrc
+
 "
 " GLOBAL SETTINGS
 "
