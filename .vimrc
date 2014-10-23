@@ -140,7 +140,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-
 " Use CTRL-F for omni completion
 imap <C-f> <C-o><C-x>
 
