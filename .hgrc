@@ -33,5 +33,4 @@ status.ignored = black bold
 
 [pager]
 pager = LESS='FSRX' more
-attend = annotate, diff, glog, log, incoming
-
+attend = annotate, diff, glog, log, incoming, help
