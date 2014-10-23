@@ -26,7 +26,8 @@ filetype plugin on
 filetype indent on
 
 " Turn syntax highlighting on
-colorscheme desert
+set background=dark
+colorscheme solarized
 syntax on
 
 "
