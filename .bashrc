@@ -7,6 +7,11 @@ fi
 
 # User specific aliases and functions
 
+## Set <C-S> free :)
+
+stty ixany
+stty ixoff -ixon
+
 ## Essential variables
 
 EDITOR="vim"
