@@ -49,6 +49,10 @@ set exrc
 " GLOBAL SETTINGS
 "
 
+" Search is case sensitive only if it is needed
+set ignorecase
+set smartcase
+
 " Write contents of the file, if it has been modified, on buffer exit
 set autowrite
 
