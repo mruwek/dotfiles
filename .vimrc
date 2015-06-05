@@ -10,17 +10,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-surround'
+Plugin 'chriskempson/base16-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ludovicchabant/vim-lawrencium'
+Plugin 'matchit.zip'
+Plugin 'python_match.vim'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'matchit.zip'
-Plugin 'python_match.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'freitass/todo.txt-vim'
-Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 
