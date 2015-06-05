@@ -35,6 +35,10 @@ set background=dark
 colorscheme base16-summerfruit
 syntax on
 
+" Turn persistent undo function on
+set undodir=~/.vim/undo
+set undofile
+
 " set lang to pl
 set spelllang=pl
 
