@@ -1,7 +1,6 @@
 text/html;                  elinks %s; needsterminal; description=HTML Text; nametemplate=%s.html
 text/html;                  elinks -dump %s; nametemplate=%s.html; copiousoutput
-text/plain;                 needsterminal; copiousoutput;
-image/*;                    eog %s ; test=test -n "$DISPLAY";
+image/*;                    shotwell %s ; test=test -n "$DISPLAY";
 image/*;					fbi %s; needsterminal;
 application/pdf;            evince '%s'; test=test -n "$DISPLAY";
 application/pdf;            fbgs -a -c %s; needsterminal;
