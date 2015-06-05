@@ -18,15 +18,12 @@ EDITOR="vim"
 GPG_TTY=$(tty)				# needed by apps connecting with gpg-agent
 HGEDITOR="hgeditor"
 
-export EDITOR GPG_TTY HGEDITOR 
-
 ## Turn Vi super-powers on
 set -o vi
 
 ## History
 HISTSIZE=1000
 HISTCONTROL='ignoreboth:erasedups'
-export HISTSIZE HISCTCONTROL
 
 ## Useful aliases
 alias ..='cd ..'
