@@ -8,15 +8,13 @@ vimdiff.args = $output $other
 
 [extensions]
 color =
-mq =
 record =
 graphlog =
 hgk =
 pager =
-hggit =
-convert =
 rebase =
 histedit =
+strip =
 
 [hgk]
 path = /usr/bin/hgview
