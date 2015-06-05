@@ -31,7 +31,7 @@ filetype indent on
 " Turn syntax highlighting on
 let base16colorspace="256"
 set background=dark
-colorscheme base16-summerfruit
+colorscheme base16-atelierseaside
 syntax on
 
 " Turn persistent undo function on
