@@ -24,12 +24,14 @@ macro index    a    "<pipe-message>goobook add<return>" "Add sender's address to
 #macro index   M     "<save-message>?<toggle-mailboxes>"                        "move a message to a mailbox"
 macro index   C     "<copy-message>?" "copy a message to a mailbox"
 macro index   M     "<save-message>?" "move a message to a mailbox"
+macro index   A     "<save-message>+Archive<return><return>"                    "move a message to a mailbox"
 folder-hook . "macro index   \eR   '<pipe-message>~/.mutt/scripts/getMessageID<return><change-folder>=Sent<return><search>~x \"\`cat /tmp/reply-id\`\"<return>'   'show reply'"
 folder-hook Sent "macro index   \eR   '<change-folder>=<return><search>~i \"\`cat /tmp/reply-id\`\"<return>'    'show reply'"
 
 # Pager
 #macro pager   c     "<sync-mailbox><change-folder>?<toggle-mailboxes>"       "open a different folder"
 #macro pager   A     ":set pipe_decode\n<pipe-message>abook --add-email<return>:unset pipe_decode\n" "add the sender address to abook"
+macro pager   A     "<save-message>+Archive<return><return>"                  "move a message to a mailbox"
 macro pager   a     "<pipe-message>goobook add<return>" "Add sender's address to your Google contacts"
 #macro pager   \ca   "<shell-escape>abook<return>" "launch abook"
 #macro pager  I     "<shell-escape>offlineimap<enter>"                         "offlineimap"
