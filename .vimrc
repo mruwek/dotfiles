@@ -29,7 +29,6 @@ filetype plugin on
 filetype indent on
 
 " Turn syntax highlighting on
-let g:base16_shell_path="/home/jacek/.config/base16-shell/"
 let base16colorspace="256"
 set background=dark
 colorscheme base16-summerfruit

@@ -25,6 +25,10 @@ set -o vi
 HISTSIZE=1000
 HISTCONTROL='ignoreboth:erasedups'
 
+## base-16-shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-atelierseaside.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 ## Useful aliases
 alias ..='cd ..'
 alias gpg='gpg2'
