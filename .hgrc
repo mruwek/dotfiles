@@ -18,6 +18,12 @@ convert =
 rebase =
 histedit =
 
+[hgk]
+path = /usr/bin/hgview
+
+[hgview]
+interface = curses
+
 [color]
 diff.diffline = none
 diff.file_a = none
