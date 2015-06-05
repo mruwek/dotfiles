@@ -14,10 +14,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'matchit.zip'
 Plugin 'python_match.vim'
 Plugin 'ludovicchabant/vim-lawrencium'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 
@@ -26,8 +26,10 @@ filetype plugin on
 filetype indent on
 
 " Turn syntax highlighting on
+let g:base16_shell_path="/home/jacek/.config/base16-shell/"
+let base16colorspace="256"
 set background=dark
-colorscheme solarized
+colorscheme base16-summerfruit
 syntax on
 
 " set lang to pl
