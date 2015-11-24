@@ -1,11 +1,11 @@
 [topydo]
-filename = ~/Dropbox/todo/todo.txt
-archive_filename = ~/Dropbox/todo/done.txt
+filename = /home/mruwek/Dropbox/todo/todo.txt
+archive_filename = /home/mruwek/Dropbox/todo/done.txt
 identifiers = text
 backup = 5
 
 [ls]
-list_format = |%I| %x %{(}p{)} %s %{due:}d %{t:}t %k
+list_format = %Z%Z%Z |%I| %x %{(}p{)} %s %{due:}d %{t:}t %k
 
 [dep]
 append_parent_projects = 1
@@ -15,9 +15,10 @@ append_parent_contexts = 1
 priority_colors = A:6,B:3,C:4,D:51,E:229,Z:249
 
 [aliases]
+dyżur = add -f ~/Dropbox/todo/dyzur.txt
 next = ls -n 1 -F '|%I| %x %{(}p{)} %S %k\t%{(}h{)}'
 pp = postpone
 pps = postpone -s
 showall = ls -x
-top = ls -F '|%I| %x %{(}p{)} %S %k\t%{(}h{)}'
+top = ls -F '%Z%Z%Z |%I| %x %{(}p{)} %S %k\t%{(}h{)}' -n 15
 unpri = ls (<Z)
