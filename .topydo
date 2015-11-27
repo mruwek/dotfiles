@@ -1,8 +1,10 @@
 [topydo]
-filename = /home/mruwek/Dropbox/todo/todo.txt
-archive_filename = /home/mruwek/Dropbox/todo/done.txt
+filename = ~/Dropbox/todo/todo.txt
+archive_filename = ~/Dropbox/todo/done.txt
 identifiers = text
 backup = 5
+default_command = top
+colors = 1
 
 [ls]
 list_format = %Z%Z%Z |%I| %x %{(}p{)} %s %{due:}d %{t:}t %k
@@ -12,9 +14,14 @@ append_parent_projects = 1
 append_parent_contexts = 1
 
 [colorscheme]
-priority_colors = A:6,B:3,C:4,D:51,E:229,Z:249
+priority_colors = A:9,B:5,C:6,D:2,E:4
+context_color = 3
+link_color = 12
+metadata_color = 22
+project_color = 48
 
 [aliases]
+cmok = do -e buziaka Dorotce
 dyżur = add -f ~/Dropbox/todo/dyzur.txt
 next = ls -n 1 -F '|%I| %x %{(}p{)} %S %k\t%{(}h{)}'
 pp = postpone
