@@ -9,8 +9,10 @@ fi
 
 ## Set <C-S> free :)
 
-stty ixany
-stty ixoff -ixon
+if [[ $- == *i* ]]; then
+    stty ixany
+    stty ixoff -ixon
+fi
 
 ## Essential variables
 
@@ -27,9 +29,11 @@ HISTSIZE=100000
 HISTCONTROL='ignoreboth:erasedups'
 
 ## base-16-shell
-if [ "$PS1" ]; then
-    BASE16_SHELL="$HOME/.config/base16-shell/base16-atelierseaside.dark.sh"
-    [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+if [[ $- == *i* ]]; then
+    if [ "$PS1" ]; then
+        BASE16_SHELL="$HOME/.config/base16-shell/base16-atelierseaside.dark.sh"
+        [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+    fi
 fi
 
 ## Useful aliases
