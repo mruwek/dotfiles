@@ -34,6 +34,13 @@ set background=dark
 colorscheme base16-atelierseaside
 syntax on
 
+" Turn on the powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2
+set t_Co=256
+
 " Turn persistent undo function on
 set undodir=~/.vim/undo
 set undofile
