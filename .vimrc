@@ -21,6 +21,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'freitass/todo.txt-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 
@@ -198,6 +200,9 @@ nmap ,s J:%s:\(\_^\\|[ („]\)\([aAiIoOuUwWzZ]\) :\1\2<Char-0xa0>:g<CR>gqap
 
 " Use <F6> to toggle line numbers
 nmap <silent> <F6> :set number!<CR>
+
+" Use <C-n> to toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " Set tabs opening
 map \t :tabnew<CR>
