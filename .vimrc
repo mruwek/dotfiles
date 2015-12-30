@@ -235,6 +235,7 @@ let g:tex_flavor='latex'
 " gVim doesn't run in term so it need some extra config
 if has("gui_running")
     set go=aegiLt
+    set gfn=Dejavu\ Sans\ Mono\ for\ Powerline\ 11 
     map  <silent>  <S-Insert>  "+p
     imap <silent>  <S-Insert>  <Esc>"+pa
     vmap <silent>  <C-Insert> "+y
