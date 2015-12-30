@@ -204,6 +204,9 @@ nmap <silent> <F6> :set number!<CR>
 " Use <C-n> to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
+" Use gs for fugitive-Gstatus
+map gs :Gstatus<CR>
+
 " Set tabs opening
 map \t :tabnew<CR>
 map \n :tabnext<CR>
