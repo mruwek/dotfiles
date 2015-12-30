@@ -207,6 +207,9 @@ map <C-n> :NERDTreeToggle<CR>
 " Use gs for fugitive-Gstatus
 map gs :Gstatus<CR>
 
+" Use hs for Lawrencium-Hgstatus
+map ,hs :Hgstatus<CR>
+
 " Set tabs opening
 map \t :tabnew<CR>
 map \n :tabnext<CR>
