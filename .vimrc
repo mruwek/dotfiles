@@ -215,7 +215,7 @@ nmap <silent> <F6> :set number!<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 " Use gs for fugitive-Gstatus
-map gs :Gstatus<CR>
+map ,gs :Gstatus<CR>
 
 " Use hs for Lawrencium-Hgstatus
 map ,hs :Hgstatus<CR>
