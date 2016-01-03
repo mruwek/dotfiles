@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'mhinz/vim-signify'
 Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'matchit.zip'
 Plugin 'python_match.vim'
