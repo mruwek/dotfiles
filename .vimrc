@@ -232,6 +232,10 @@ map ;' :s:::g<Left><Left><Left>
 map ;. :s:></:></:<Left><Left><Left>
 map ;, :s:="":="":<Left><Left>
 
+" inserting blank lines
+nmap ,o o<Esc>k
+nmap ,O O<Esc>j
+
 "
 " Latex-suite part
 "
