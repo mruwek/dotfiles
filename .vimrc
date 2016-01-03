@@ -156,6 +156,15 @@ set wildmenu
 "   - on second <Tab>, complete the next full match and show menu
 set wildmode=list:longest,full
 
+" Ignore tmp, lib, vcs, and build related files
+set wildignore+=*/tmp/*,*.so,*.swp
+let g:ctrlp_user_command = {
+            \ 'types': {
+              \ 1: ['.git', 'cd %s && git ls-files'],
+              \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+              \ }
+            \ }
+
 "
 " AUTOCOMMANDS
 "
