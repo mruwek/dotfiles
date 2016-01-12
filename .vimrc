@@ -16,6 +16,8 @@ Plugin 'mhinz/vim-signify'
 Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'matchit.zip'
 Plugin 'python_match.vim'
+Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
@@ -24,6 +26,7 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Konfekt/FastFold'
 
 call vundle#end()
 
@@ -164,6 +167,9 @@ let g:ctrlp_user_command = {
               \ 2: ['.hg', 'hg --cwd %s locate -I .'],
               \ }
             \ }
+
+" Don't use slow rope module as we use fast jedi-vim for same functionality
+let g:pymode_rope = 0
 
 "
 " AUTOCOMMANDS
