@@ -22,6 +22,7 @@ project_color = 48
 
 [aliases]
 cmok = do -e buziaka Dorotce
+did = do -d yes
 dyżur = add -f ~/Dropbox/todo/dyzur.txt
 next = ls -n 1 -F '|%I| %x %{(}p{)} %S %k\t%{(}h{)}'
 pp = postpone
@@ -29,3 +30,17 @@ pps = postpone -s
 showall = ls -x
 top = ls -F '%Z%Z%Z |%I| %x %{(}p{)} %S %k\t%{(}h{)}' -n 15
 unpri = ls (<Z)
+star = tag {} star 1
+unstar = tag {} star
+
+[column_keymap]
+X = cmd did {}
+s = cmd star {}
+us = cmd unstar {}
+pt = cmd postpone {} tod
+pst = cmd postpone -s {} tod
+t = cmd top
+n = cmd next
+ggh = cmd ls
+pp = postpone
+pps = postpone_s
