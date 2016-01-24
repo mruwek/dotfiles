@@ -9,25 +9,38 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" core plugins
 Plugin 'gmarik/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mhinz/vim-signify'
-Plugin 'ludovicchabant/vim-lawrencium'
-Plugin 'python_match.vim'
-Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-vinegar'
+" enhancing builtin functionality
+Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-characterize'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-speeddating'
+" general purpose
+Plugin 'Konfekt/FastFold'
 Plugin 'godlygeek/tabular'
+" vcs related
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
+Plugin 'ludovicchabant/vim-lawrencium'
+Plugin 'mhinz/vim-signify'
+" pandoc
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+" todo.txt
 Plugin 'freitass/todo.txt-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Konfekt/FastFold'
+" python
+Plugin 'klen/python-mode'
+Plugin 'python_match.vim'
+Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
 
