@@ -144,6 +144,12 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")|execute("normal 
 " Strip eventual BOM
 au BufReadPost * setlocal nobomb
 
+" Load quicklists into cwindow after grepping
+au QuickFixCmdPost *grep* cwindow
+
+" Delete fugitve buffers after leaving them
+au BufReadPost fugitive://* set bufhidden=delete
+
 "
 " MAPPINGS
 "
@@ -188,6 +194,9 @@ map ,gs :Gstatus<CR>
 
 " Use hs for Lawrencium-Hgstatus
 map ,hs :Hgstatus<CR>
+
+" map for fugitive-Glog
+map ,gl :Glog<CR>
 
 " Fast substitution
 map ;; :%s:::g<Left><Left><Left>
