@@ -3,14 +3,9 @@
 # rc file for mutt
 
 set mbox_type=Maildir
-set spoolfile=imaps://-@-/INBOX
-set folder=imaps://-@-
-set imap_pass="***"
 set timeout=20
 set mail_check=60
 set imap_keepalive=300
-#set spoolfile="~/mail/
-#set folder="~/mail/"
 set mask="!^\\.[^.]"
 set record="=Sent"
 set postponed="=Drafts"
@@ -20,23 +15,18 @@ set edit_headers
 set date_format="%d.%m.%Y %H:%M"
 set index_format="%2C %Z |%d| %-15.15F (%?l?%4l&%4c?) %s"
 set forward_format="Fwd: %s"
-set sendmail="/usr/bin/msmtp"
+set sendmail="~/bin/msmtp"
 set use_from=yes
 set envelope_from=yes
 set header_cache="~/mail/cache/"
 set message_cachedir="~/mail/cache/"
-set locale="pl_PL.utf8"
 set send_charset="utf-8"
 unset pipe_decode
+set delete=yes
 
 set encode_from
-
 set signature='~/.signature'    # signature file
-my_hdr From: Jacek <--@--.pl>
-my_hdr Reply-To: Jacek <--@--.pl>
 fcc-hook . "=Sent"              # the file to copy sent messages
-alternates "(jss|mruwek|jacek|hs)@mruwek.pl"
-alternates "mruwek@(gmail.com|vcf.pl)"
 set metoo=no
 
 set pager_index_lines=9
@@ -51,7 +41,17 @@ unset markers
 set smart_wrap
 unset wait_key
 
-set delete=yes
+# sidebar
+set sidebar_visible
+set sidebar_on_right
+set sidebar_width=16
+set sidebar_short_path
+set sidebar_folder_indent
+set mail_check_stats
+bind index,pager \Cj sidebar-next
+bind index,pager \Ck sidebar-prev
+bind index,pager \Co sidebar-open
+bind index,pager B sidebar-toggle-visible
 
 # customize the pager
 bind pager K previous-line
@@ -66,7 +66,8 @@ set query_command = "goobook query %s"
 #set query_command = "google contacts list '(?i).*%s'"
 #set query_command = "lbdbq '%s'"
 
-#source ~/.mutt/mailboxes
+source ~/.mutt/private # server, login, pass, my_hdr, alternates
+source ~/.mutt/mailboxes
 source ~/.mutt/headers
 source ~/.mutt/folder-hooks
 source ~/.mutt/lists
