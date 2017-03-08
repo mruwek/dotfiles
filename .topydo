@@ -2,12 +2,12 @@
 filename = ~/Dropbox/todo/todo.txt
 archive_filename = ~/Dropbox/todo/done.txt
 identifiers = text
-backup = 5
-default_command = top
+backup_count = 20
+default_command = add
 colors = 1
 
 [ls]
-list_format = %Z%Z%Z |%I| %x %{(}p{)} %s %{due:}d %{t:}t %k
+list_format = %z%z%z |%I| %x %{(}p{)} %s %{due:}d %{t:}t %k
 
 [dep]
 append_parent_projects = 1
@@ -19,28 +19,37 @@ context_color = 3
 link_color = 12
 metadata_color = 22
 project_color = 48
+focus_background_color = 152
+marked_background_color = light-blue
 
 [aliases]
 cmok = do -e buziaka Dorotce
-did = do -d yes
+yes = do -d yes
+did = do -d
 dyżur = add -f ~/Dropbox/todo/dyzur.txt
 next = ls -n 1 -F '|%I| %x %{(}p{)} %S %k\t%{(}h{)}'
 pp = postpone
 pps = postpone -s
 showall = ls -x
-top = ls -F '%Z%Z%Z |%I| %x %{(}p{)} %S %k\t%{(}h{)}' -n 15
+show = ls -F %r -i
+top = ls -F '%z%z%z |%I| %x %{(}p{)} %S %k\t%{(}h{)}' -n 15
 unpri = ls (<Z)
 star = tag {} star 1
 unstar = tag {} star
 
 [column_keymap]
-X = cmd did {}
-s = cmd star {}
-us = cmd unstar {}
+@h = cmd append {} @dom
+@w = cmd append {} @praca
+X = cmd yes {}
+* = cmd star {}
+** = cmd unstar {}
 pt = cmd postpone {} tod
 pst = cmd postpone -s {} tod
-t = cmd top
-n = cmd next
-ggh = cmd ls
+ga = cmdv show {}
+t = cmdv top
+n = cmdv next
 pp = postpone
-pps = postpone_s
+ps = postpone_s
+q = cmd exit
+gp = cmdv dep ls to {}
+gc = cmdv dep ls {} to
