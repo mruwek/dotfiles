@@ -3,7 +3,6 @@ set tw=72
 set spelllang=pl
 set spell
 
-nmap ,nql  :g:^> :normal gq$<CR>
 nmap ,ceql :g:^> $\n^[>]\=[ ]\=$:d<CR>
 nmap ,dl   :g:^$:,/./-j<CR>
 nmap ,rqs  :g:^> -- :normal ms<CR>/^$<CR>kd's
@@ -13,6 +12,5 @@ nmap ,odp  /^Subject:<CR>:s/Odp:/Re:/g<CR>
 au BufRead <buffer> :silent! normal ,odp
 au BufRead <buffer> :silent! normal ,re
 au BufRead <buffer> :silent! normal ,rqs
-au BufRead <buffer> :silent normal ,nql
 au BufRead <buffer> :silent normal ,ceql
 au BufRead <buffer> :silent normal ,dl

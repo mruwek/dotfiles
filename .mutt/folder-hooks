@@ -5,8 +5,6 @@
 
 # Profiles
 folder-hook . source ~/.mutt/profile.default                      # default profile
-folder-hook admin source ~/.mutt/profile.admin
-folder-hook Lists/arka source ~/.mutt/profile.arka
 folder-hook Dorotka source ~/.mutt/profile.Dorotka
 folder-hook Powiadomienia/allegro source ~/.mutt/profile.allegro
 folder-hook Powiadomienia/zakupy source ~/.mutt/profile.zakupy
