@@ -11,7 +11,7 @@ call vundle#begin()
 
 " core plugins
 Plugin 'gmarik/Vundle.vim'
-Plugin 'chriskempson/base16-vim'
+Plugin 'romainl/Apprentice'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -45,14 +45,12 @@ Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 
 " Colorscheme
-let base16colorspace="256"
-set background=dark
-colorscheme base16-atelierseaside
+colorscheme apprentice
 
 " Turn on the powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 set laststatus=2
 set t_Co=256
 
@@ -101,8 +99,8 @@ set showmatch
 " Jump to matching bracket for 2/10th of a second (works with showmatch)
 set matchtime=2
 
-" Don't highlight results of a search
-set nohlsearch
+" Show the cursorline
+set cursorline
 
 " List mode: false
 set nolist
@@ -131,9 +129,6 @@ let g:ctrlp_user_command = {
               \ }
             \ }
 
-" Don't use slow rope module as we use fast jedi-vim for same functionality
-let g:pymode_rope = 0
-
 "
 " AUTOCOMMANDS
 "
@@ -151,6 +146,27 @@ au QuickFixCmdPost *grep* cwindow
 au BufReadPost fugitive://* set bufhidden=delete
 
 "
+" PYTHON
+"
+
+" Don't use slow rope module as we use fast jedi-vim for same functionality
+let g:pymode_rope = 0
+
+" force python3 in python plugins
+let g:jedi#force_py_version = 3
+let g:pymode_python = 'python3'
+
+"
+" LATEX-SUITE
+"
+
+" Set grep to always generate a file-name
+set grepprg=grep\ -nH\ $*
+
+" *.tex files are LaTeX files
+let g:tex_flavor='latex'
+
+"
 " MAPPINGS
 "
 
@@ -163,15 +179,6 @@ map <C-@> <C-Space>
 imap <C-S-Space> <Plug>IMAP_JumpForward
 imap <C-@> <C-S-Space>
 
-" Easy window split navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-" Use CTRL-F for omni completion
-imap <C-f> <C-o><C-x>
-
 " Map CTRL-L to piece-wise copying of the line above the current one
 imap <C-L> @@@<ESC>hhkywjl?@@@<CR>P/@@@<CR>3s
 
@@ -182,12 +189,6 @@ nmap ,f [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 " Use ,s to convert spaces after one-letter prepositions and conjunctions to
 " nobreakable ones
 nmap ,s J:%s:\(\_^\\|[ („]\)\([aAiIoOuUwWzZ]\) :\1\2<Char-0xa0>:g<CR>gqap
-
-" Use <F6> to toggle line numbers
-nmap <silent> <F6> :set number!<CR>
-
-" Use <C-n> to toggle NERDTree
-map <C-n> :NERDTreeToggle<CR>
 
 " Use gs for fugitive-Gstatus
 map ,gs :Gstatus<CR>
@@ -205,16 +206,9 @@ map ;. :s:></:></:<Left><Left><Left>
 map ;, :s:="":="":<Left><Left>
 
 "
-" Latex-suite part
+" GVIM
 "
 
-" Set grep to always generate a file-name
-set grepprg=grep\ -nH\ $*
-
-" *.tex files are LaTeX files
-let g:tex_flavor='latex'
-
-" gVim doesn't run in term so it need some extra config
 if has("gui_running")
     set go=aegiLt
     set gfn=Dejavu\ Sans\ Mono\ for\ Powerline\ 11 
