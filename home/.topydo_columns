@@ -1,4 +1,4 @@
-[all]
+[@dom]
 title = domowe
 filterexpr = @dom
 
@@ -10,3 +10,9 @@ filterexpr = due:tod -@praca
 title = Zaległe
 filterexpr = due:<tod -@praca
 sortexpr = desc:due
+
+[wo-context]
+filterexpr = -@
+
+[unpri]
+filterexpr = (<Z)
