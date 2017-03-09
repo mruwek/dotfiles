@@ -1,23 +1,22 @@
 [ui]
-username = ... <-@->
+username = Jacek Sowiński <mruwek@gmail.com>
 ssh = ssh -C
-merge =vimdiff
+merge = vimdiff
 
 [merge-tools]
 vimdiff.args = $output $other
 
 [extensions]
 color =
+mq =
 record =
 graphlog =
 hgk =
 pager =
+convert =
 rebase =
 histedit =
 strip =
-
-[hgk]
-path = /usr/bin/hgview
 
 [hgview]
 interface = curses
