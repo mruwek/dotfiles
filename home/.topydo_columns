@@ -1,0 +1,12 @@
+[all]
+title = domowe
+filterexpr = @dom
+
+[today]
+title = Dziś
+filterexpr = due:tod -@praca
+
+[overdue]
+title = Zaległe
+filterexpr = due:<tod -@praca
+sortexpr = desc:due
