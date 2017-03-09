@@ -36,6 +36,12 @@ top = ls -F '%z%z%z |%I| %x %{(}p{)} %S %k\t%{(}h{)}' -n 15
 unpri = ls (<Z)
 star = tag {} star 1
 unstar = tag {} star
+; praca
+hCh = add {} uzupełnić i oddać hCh do archiwum +dokumentacja @praca due:fri (D)
+zla = add {} wystawić ZUS-ZLA @praca due:tod (C)
+karta = add {} przedłużyć +zlecenia rehabilitacyjne @praca due:tod (B)
+przyjęcie = add {} +przyjęcie (C)
+wypis = add {} +wypis (C)
 
 [column_keymap]
 . = repeat
@@ -56,3 +62,7 @@ n = cmdv next
 t = cmdv top
 q = cmd exit
 X = cmd yes {}
+; praca
+@w = cmd append {} @praca
+nw = cmdv next @praca
+tw = cmdv top @praca
