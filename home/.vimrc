@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'romainl/Apprentice'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'bling/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-vinegar'
 " enhancing builtin functionality
@@ -46,13 +47,6 @@ call vundle#end()
 
 " Colorscheme
 colorscheme apprentice
-
-" Turn on the powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-set laststatus=2
-set t_Co=256
 
 " Turn persistent undo function on
 set undodir=~/.vim/undo
