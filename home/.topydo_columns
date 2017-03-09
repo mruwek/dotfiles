@@ -1,19 +1,30 @@
-[dom]
-title = domowe
-filterexpr = @dom
-groupexpr = desc:project
+[wypisy]
+title = wypisy w tym tygodniu
+filterexpr = +wypis due:<1w
+sortexpr = due
 
 [dziś]
 title = dziś
-filterexpr = due:tod -@praca
+filterexpr = due:tod
 sortexpr = desc:importance,due,desc:priority
 groupexpr = context
+
+[@praca]
+title = praca
+filterexpr = @praca
+sortexpr = desc:importance,due,desc:priority
+groupexpr = desc:project
 
 [zaległe]
 title = zaległe
 filterexpr = due:<tod -@praca
 sortexpr = due,desc:importance,desc:priority
 groupexpr = context
+
+[dom]
+title = domowe
+filterexpr = @dom
+groupexpr = desc:project
 
 [bez kontekstu]
 filterexpr = -@
