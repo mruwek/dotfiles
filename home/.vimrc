@@ -199,6 +199,13 @@ map ,hs :Hgstatus<CR>
 " map for fugitive-Glog
 map ,gl :Glog<CR>
 
+" Tabularize maps
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
+nmap <Leader>t :Tabularize /\|<CR>
+
 " Fast substitution
 map ;; :%s:::g<Left><Left><Left>
 map ;' :s:::g<Left><Left><Left>
