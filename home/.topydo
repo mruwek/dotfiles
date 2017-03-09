@@ -4,7 +4,7 @@ archive_filename = ~/Dropbox/todo/done.txt
 identifiers = text
 backup_count = 20
 default_command = add
-colors = 1
+colors = 256
 
 [ls]
 list_format = %z%z%z |%I| %x %{(}p{)} %s %{due:}d %{t:}t %k
@@ -14,7 +14,7 @@ append_parent_projects = 1
 append_parent_contexts = 1
 
 [colorscheme]
-priority_colors = A:9,B:5,C:6,D:2,E:4
+priority_colors = A:1,B:9,C:6,D:2,E:4
 context_color = 3
 link_color = 12
 metadata_color = 22
@@ -30,26 +30,29 @@ dyżur = add -f ~/Dropbox/todo/dyzur.txt
 next = ls -n 1 -F '|%I| %x %{(}p{)} %S %k\t%{(}h{)}'
 pp = postpone
 pps = postpone -s
-showall = ls -x
 show = ls -F %r -i
+showall = ls -x
 top = ls -F '%z%z%z |%I| %x %{(}p{)} %S %k\t%{(}h{)}' -n 15
 unpri = ls (<Z)
 star = tag {} star 1
 unstar = tag {} star
 
 [column_keymap]
+. = repeat
 @h = cmd append {} @dom
-@w = cmd append {} @praca
-X = cmd yes {}
+@D = cmd append {} @Dorotka
 * = cmd star {}
 ** = cmd unstar {}
-pt = cmd postpone {} tod
-pst = cmd postpone -s {} tod
-ga = cmdv show {}
-t = cmdv top
-n = cmdv next
+gp = cmdv dep ls parentsof {}
+gc = cmdv dep ls childrenof {}
 pp = postpone
 ps = postpone_s
+pt = cmd postpone {} tod
+pst = cmd postpone -s {} tod
+<C-g> = cmdv show {}
+<C-g>c = cmdv dep ls childrenof {}
+<C-g>p = cmdv dep ls parentsof
+n = cmdv next
+t = cmdv top
 q = cmd exit
-gp = cmdv dep ls to {}
-gc = cmdv dep ls {} to
+X = cmd yes {}
