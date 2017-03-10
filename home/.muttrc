@@ -2,6 +2,7 @@
 #
 # rc file for mutt
 
+source ~/.mutt/private # server, login, pass, my_hdr, alternates
 set mbox_type=Maildir
 set timeout=20
 set mail_check=60
@@ -66,7 +67,6 @@ set query_command = "goobook query %s"
 #set query_command = "google contacts list '(?i).*%s'"
 #set query_command = "lbdbq '%s'"
 
-source ~/.mutt/private # server, login, pass, my_hdr, alternates
 source ~/.mutt/mailboxes
 source ~/.mutt/headers
 source ~/.mutt/folder-hooks
