@@ -1,0 +1,11 @@
+[user]
+	email = mruwek@gmail.com
+	name = Jacek Sowiński
+[push]
+	default = simple
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
