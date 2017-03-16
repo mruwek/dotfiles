@@ -1,4 +1,4 @@
 #!/bin/sh
 myip=`dig +short myip.opendns.com @resolver1.opendns.com`
 fqdn=`dig +short -x $myip`
-/usr/bin/msmtp --domain ${fqdn::-1} $@
+/usr/sbin/msmtp --domain ${fqdn::-1} $@
