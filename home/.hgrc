@@ -17,6 +17,7 @@ convert =
 rebase =
 histedit =
 strip =
+patchbomb =
 
 [hgview]
 interface = curses
