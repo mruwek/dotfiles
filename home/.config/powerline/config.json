@@ -1,1 +1,7 @@
-/home/jacek/.homesick/repos/dotfiles/home/.config/powerline/config.json
+{
+    "ext": {
+        "shell": {
+            "theme": "default_leftonly"
+        }
+    }
+}
