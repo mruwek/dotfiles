@@ -14,7 +14,7 @@ for path_candidate in /opt/local/sbin \
   /usr/local/share/npm/bin \
   ~/.rbenv/bin \
   ~/bin \
-  ~/.local/bin \
+  ~/.local/bin
 do
   if [ -d ${path_candidate} ]; then
     export PATH=${PATH}:${path_candidate}
@@ -118,3 +118,13 @@ dedupe_path() {
 }
 
 dedupe_path
+
+# Mount the portable Documents folder, if it isn't already
+if [ ! -d Documents ]; then
+  mount -f "$USBDRV\Documents" /home/mruwek/Documents
+fi
+
+# Mount the portable Dropbox folder, if it isn't already
+if [ ! -d Dropbox ]; then
+  mount -f "$USBDRV\Dropbox" /home/mruwek/Dropbox
+fi
