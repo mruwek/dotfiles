@@ -15,7 +15,7 @@ for path_candidate in /opt/local/sbin \
   /usr/local/share/npm/bin \
   ~/.rbenv/bin \
   ~/bin \
-  ~/.local/bin \
+  ~/.local/bin
 do
   if [ -d ${path_candidate} ]; then
     export PATH=${PATH}:${path_candidate}
