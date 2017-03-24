@@ -1,3 +1,4 @@
+export EDITOR=vim
 export KEYTIMEOUT=1
 # Correct spelling for commands
 setopt correct
