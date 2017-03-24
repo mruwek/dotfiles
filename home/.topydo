@@ -40,8 +40,8 @@ unstar = tag {} star
 hCh = add {} uzupełnić i oddać hCh do archiwum +dokumentacja @praca due:fri (D)
 zla = add {} wystawić ZUS-ZLA @praca due:tod (C)
 karta = add {} przedłużyć +zlecenia rehabilitacyjne @praca due:tod (B)
-przyjęcie = add {} +przyjęcie (C)
-wypis = add {} +wypis (C)
+przyjęcie = add {} +przyjęcie (C) @praca
+wypis = add {} +wypis (C) @praca
 
 [column_keymap]
 . = repeat
