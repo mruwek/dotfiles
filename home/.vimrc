@@ -4,45 +4,40 @@
 
 " Turn Vim super-powers on
 set nocompatible
-" set the runtime path to include Vundle and initialize
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
+call plug#begin()
 " core plugins
-Plugin 'gmarik/Vundle.vim'
-Plugin 'romainl/Apprentice'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-vinegar'
+Plug 'romainl/Apprentice'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-unimpaired'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-vinegar'
 " enhancing builtin functionality
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-characterize'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-speeddating'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-characterize'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-speeddating'
 " general purpose
-Plugin 'Konfekt/FastFold'
-Plugin 'godlygeek/tabular'
+Plug 'Konfekt/FastFold'
+Plug 'godlygeek/tabular'
 " vcs related
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rhubarb'
-Plugin 'ludovicchabant/vim-lawrencium'
-Plugin 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'ludovicchabant/vim-lawrencium'
+Plug 'mhinz/vim-signify'
 " pandoc
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-pandoc', { 'for': ['markdown', 'pandoc'] }
+Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': ['markdown', 'pandoc'] }
 " todo.txt
-Plugin 'freitass/todo.txt-vim'
+Plug 'freitass/todo.txt-vim'
 " python
-Plugin 'klen/python-mode'
-Plugin 'python_match.vim'
-Plugin 'davidhalter/jedi-vim'
-
-call vundle#end()
+Plug 'klen/python-mode', { 'for': 'python' }
+Plug 'python_match.vim', { 'for': 'python' }
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+call plug#end()
 
 " Colorscheme
 colorscheme apprentice
