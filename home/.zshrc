@@ -84,12 +84,19 @@ if [ -n "$(/bin/ls ~/.zshrc.d)" ]; then
 fi
 
 source ~/.zplug/init.zsh
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "lib/correction", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh
 zplug "lib/git", from:oh-my-zsh
 zplug "lib/history", from:oh-my-zsh
 zplug "lib/theme-and-appearance", from:oh-my-zsh
 zplug "themes/flazz", from:oh-my-zsh, as:theme
+
+# Install missing plugins
+if ! zplug check --verbose; then
+  zplug install
+fi
+
 zplug load
 
 eval "$(thefuck --alias)"
