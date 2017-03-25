@@ -90,7 +90,7 @@ zplug "lib/directories", from:oh-my-zsh
 zplug "lib/git", from:oh-my-zsh
 zplug "lib/history", from:oh-my-zsh
 zplug "lib/theme-and-appearance", from:oh-my-zsh
-zplug "themes/flazz", from:oh-my-zsh, as:theme
+zplug "mruwek/speedy-zsh-theme", as:theme
 
 # Install missing plugins
 if ! zplug check --verbose; then
