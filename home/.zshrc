@@ -99,8 +99,6 @@ fi
 
 zplug load
 
-eval "$(thefuck --alias)"
-
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
@@ -126,3 +124,6 @@ dedupe_path() {
 }
 
 dedupe_path
+
+# Aliases
+alias dupa='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
