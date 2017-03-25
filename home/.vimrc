@@ -8,6 +8,7 @@ set nocompatible
 call plug#begin()
 " core plugins
 Plug 'romainl/Apprentice'
+Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-unimpaired'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -41,13 +42,6 @@ call plug#end()
 
 " Colorscheme
 colorscheme apprentice
-
-" Turn on the powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-set laststatus=2
-set t_Co=256
 
 " Turn persistent undo function on
 set undodir=~/.vim/undo
