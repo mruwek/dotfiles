@@ -44,6 +44,9 @@ call plug#end()
 colorscheme apprentice
 
 " Turn persistent undo function on
+if !isdirectory($HOME."/.vim/undo")
+    call mkdir($HOME."/.vim/undo", "", 0700)
+endif
 set undodir=~/.vim/undo
 set undofile
 
