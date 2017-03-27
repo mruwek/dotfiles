@@ -89,10 +89,14 @@ zplug "lib/directories", from:oh-my-zsh
 zplug "lib/git", from:oh-my-zsh
 zplug "lib/history", from:oh-my-zsh
 zplug "lib/theme-and-appearance", from:oh-my-zsh
-zplug "themes/flazz", from:oh-my-zsh, as:theme
-zplug load
+zplug "mruwek/speedy-zsh-theme", as:theme
 
-eval "$(thefuck --alias)"
+# Install missing plugins
+if ! zplug check --verbose; then
+  zplug install
+fi
+
+zplug load
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
@@ -129,3 +133,6 @@ fi
 if [ ! -d Dropbox ]; then
   mount -f "$USBDRV\Dropbox" /home/mruwek/Dropbox
 fi
+
+# Aliases
+alias dupa='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
