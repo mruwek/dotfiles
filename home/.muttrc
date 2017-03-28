@@ -21,7 +21,7 @@ set use_from=yes
 set envelope_from=yes
 set header_cache="~/mail/cache/"
 set message_cachedir="~/mail/cache/"
-set header_cache_backend=bdb
+set header_cache_backend=lmdb
 set send_charset="utf-8"
 unset pipe_decode
 set delete=yes
