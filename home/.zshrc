@@ -84,6 +84,7 @@ if [ -n "$(/bin/ls ~/.zshrc.d)" ]; then
 fi
 
 source ~/.zplug/init.zsh
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "lib/correction", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh
 zplug "lib/git", from:oh-my-zsh
@@ -97,6 +98,7 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+PATH=$PATH:$ZPLUG_BIN
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
