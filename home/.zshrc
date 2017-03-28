@@ -136,3 +136,5 @@ fi
 
 # Aliases
 alias dupa='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+alias pip3='noglob pip3 --no-cache-dir --disable-pip-version-check'
+alias pip2='noglob pip2 --no-cache-dir --disable-pip-version-check'
