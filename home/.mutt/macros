@@ -13,9 +13,9 @@ bind editor <Tab> complete-query
 #macro generic I     "<shell-escape>offlineimap<enter>"                         "offlineimap"
 
 # Index
-macro index   sS     "<pipe-message>ssh sarc@mruwek.pl spamc -L spam -u mruwek<return>d" "Mark as spam"
-macro index   sH     "<pipe-message>ssh sarc@mruwek.pl spamc -L ham -u mruwek<return>" "Mark as ham"
-macro index   sF     "<pipe-message>ssh sarc@mruwek.pl spamc -L forget -u mruwek<return>" "Forget in SA"
+macro index   SS     "<pipe-message>ssh sarc@mruwek.pl spamc -L spam -u mruwek<return>d" "Mark as spam"
+macro index   SH     "<pipe-message>ssh sarc@mruwek.pl spamc -L ham -u mruwek<return>" "Mark as ham"
+macro index   SF     "<pipe-message>ssh sarc@mruwek.pl spamc -L forget -u mruwek<return>" "Forget in SA"
 #macro index   c     "<sync-mailbox><change-folder>?<toggle-mailboxes>"       "open a different folder"
 #macro index   A     ":set pipe_decode\n<pipe-message>abook --add-email<return>:unset pipe_decode\n"  "add the sender address to abook"
 macro index    a    "<pipe-message>goobook add<return>" "Add sender's address to your Google contacts"
