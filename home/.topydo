@@ -2,6 +2,7 @@
 filename = ~/Dropbox/todo/todo.txt
 archive_filename = ~/Dropbox/todo/done.txt
 identifiers = text
+identifier_alphabet         = jklfdsahg0123456789bceimnopqrtuvwxyz
 backup_count = 20
 default_command = add
 colors = 256
