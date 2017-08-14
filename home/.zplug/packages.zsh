@@ -9,3 +9,4 @@ zplug "iamthememory/homesick-zsh-completion"
 zplug "junegunn/fzf", as:command, hook-build:"./install --bin", use:"bin/{fzf-tmux,fzf}"
 zplug "k4rthik/git-cal", as:command
 zplug "junegunn/fzf", use:"shell/*.zsh", defer:2
+zplug "Ajnasz/oh-my-zsh", use:"plugins/topydo"
