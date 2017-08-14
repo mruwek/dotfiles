@@ -57,3 +57,5 @@ alias forgetgpg='pkill -SIGHUP gpg-agent'
 alias clearraw='for i in *.orf; do if [ ! -f ${i::-3}jpg ]; then rm $i; fi; done' 
 alias smallnames='rename.pl tr/A-Z/a-z/ *'
 alias extract_kindle_covers='python ~/varia/kundel/ExtractCoverThumbs-py.zip --skip-apnx'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -15,6 +15,7 @@ for path_candidate in /opt/local/sbin \
   /usr/local/share/npm/bin \
   ~/.rbenv/bin \
   ~/bin \
+  ~/.fzf/bin \
   ~/.local/bin
 do
   if [ -d ${path_candidate} ]; then
@@ -83,21 +84,8 @@ if [ -n "$(/bin/ls ~/.zshrc.d)" ]; then
   done
 fi
 
-source ~/.zplug/init.zsh
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-zplug "lib/correction", from:oh-my-zsh
-zplug "lib/directories", from:oh-my-zsh
-zplug "lib/git", from:oh-my-zsh
-zplug "lib/history", from:oh-my-zsh
-zplug "lib/theme-and-appearance", from:oh-my-zsh
-zplug "mruwek/speedy-zsh-theme", as:theme
-
-# Install missing plugins
-if ! zplug check --verbose; then
-  zplug install
-fi
-
-zplug load
+source ~/dev/antigen/antigen.zsh
+antigen init ~/.antigenrc
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
