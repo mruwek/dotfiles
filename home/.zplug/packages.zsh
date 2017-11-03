@@ -1,11 +1,10 @@
-zplug "plugins/history", from:oh-my-zsh
-zplug "plugins/vi-mode", from:oh-my-zsh
-zplug "zsh-users/zsh-completions"
-zplug "plugins/colored-man-pages", from:oh-my-zsh
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "zsh-users/zsh-history-substring-search", defer:3
-zplug "RobSis/zsh-completion-generator"
-zplug "iamthememory/homesick-zsh-completion"
-zplug "me-and/fzf", as:command, hook-build:"./install --bin", use:"bin/{fzf-tmux,fzf}"
-zplug "k4rthik/git-cal", as:command
-zplug "me-and/fzf", use:"shell/*.zsh", defer:2
+antigen bundle history
+antigen bundle vi-mode
+antigen bundle zsh-users/zsh-completions
+antigen bundle colored-man-pages
+antigen bundle RobSis/zsh-completion-generator
+antigen bundle iamthememory/homesick-zsh-completion
+antigen bundle ~/.fzf/shell --no-local-clone
+antigen bundle Ajnasz/oh-my-zsh --loc=plugins/topydo
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search

@@ -13,6 +13,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-unimpaired'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-vinegar'
+Plug 'junegunn/fzf.vim'
 " enhancing builtin functionality
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-repeat'
