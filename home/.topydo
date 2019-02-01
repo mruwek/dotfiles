@@ -15,7 +15,7 @@ append_parent_projects = 1
 append_parent_contexts = 1
 
 [colorscheme]
-priority_colors = A:1,B:9,C:6,D:2,E:4
+priority_colors = A:196,B:166,C:220,D:2,E:4
 context_color = 3
 link_color = 12
 metadata_color = 22

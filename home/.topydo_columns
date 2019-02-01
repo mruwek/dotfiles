@@ -20,3 +20,9 @@ filterexpr = -@
 
 [bez priorytetu]
 filterexpr = (<Z)
+
+[NoDate]
+title = No Date
+filterexpr = -due:
+groupexpr = context
+show_all = 1
