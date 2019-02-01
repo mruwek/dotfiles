@@ -1,5 +1,4 @@
-text/html;                  elinks %s; needsterminal; description=HTML Text; nametemplate=%s.html
-text/html;                  elinks -dump %s; nametemplate=%s.html; copiousoutput
+text/html; lynx -dump -width=78 -nolist --assume_charset=utf8 %s | sed 's/^   //'; copiousoutput; needsterminal; nametemplate=%s.html
 image/*;                    shotwell %s ; test=test -n "$DISPLAY";
 image/*;					fbi %s; needsterminal;
 application/pdf;            evince '%s'; test=test -n "$DISPLAY";
