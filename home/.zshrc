@@ -90,6 +90,8 @@ bindkey '^[OA' history-substring-search-up
 bindkey '^[OB' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
 
 # In case a plugin adds a redundant path entry, remove duplicate entries
 # from PATH
