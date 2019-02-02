@@ -3,7 +3,10 @@
 # Command formats for gpg.
 # 
 
-# encrypt also to self
+# use gpgme
+set crypt_use_gpgme
+
+# encrypt also to self - don't forget to set pgp_default_key somewhere
 set pgp_encrypt_self
 
 # decode application/pgp

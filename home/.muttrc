@@ -16,7 +16,7 @@ set edit_headers
 set date_format="%d.%m.%Y %H:%M"
 set index_format="%2C %Z |%d| %-15.15F (%?l?%4l&%4c?) %s"
 set forward_format="Fwd: %s"
-set sendmail="~/bin/msmtp"
+set sendmail="$HOME/bin/msmtp"
 set use_from=yes
 set envelope_from=yes
 set header_cache="~/mail/cache/"

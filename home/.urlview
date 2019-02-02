@@ -1,1 +1,1 @@
-COMMAND /usr/bin/google-chrome %s &
+COMMAND /usr/bin/google-chrome %s &> /dev/null &
