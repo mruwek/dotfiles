@@ -88,6 +88,8 @@ source ~/dev/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
 bindkey '^[[A' history-substring-search-up
+bindkey '^[OB' history-substring-search-down
+bindkey '^[OA' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
@@ -115,3 +117,4 @@ dedupe_path
 
 # Aliases
 alias dupa='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+alias ls='ls --color=tty --group-directories-first'
