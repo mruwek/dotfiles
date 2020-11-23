@@ -37,7 +37,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': ['markdown', 'pandoc'] }
 " todo.txt
 Plug 'freitass/todo.txt-vim'
 " python
-Plug 'klen/python-mode', { 'for': 'python' }
+Plug 'python-mode/python-mode', { 'branch':'develop', 'for': 'python' }
 Plug 'vim-scripts/python_match.vim', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 call plug#end()
