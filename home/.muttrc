@@ -4,8 +4,7 @@
 
 source ~/.mutt/private # server, login, pass, my_hdr, alternates
 set mbox_type=Maildir
-set timeout=20
-set mail_check=60
+set imap_idle
 set imap_keepalive=300
 set mask="!^\\.[^.]"
 set record="=Sent"
