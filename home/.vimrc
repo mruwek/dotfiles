@@ -165,7 +165,8 @@ let g:tex_flavor='latex'
 "
 
 " Set the <Leader> for combo commands
-let mapleader = ","
+nnoremap <SPACE> <Nop>
+let mapleader = " "
 
 " remap Latex-suite jump between placeholders
 map <C-Space> <Plug>IMAP_JumpForward
@@ -178,20 +179,20 @@ imap <C-L> @@@<ESC>hhkywjl?@@@<CR>P/@@@<CR>3s
 
 " Map ,f to display all lines with keyword under cursor and ask which one to
 " jump to
-nmap ,f [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
+nmap <Leader>f [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
 " Use ,s to convert spaces after one-letter prepositions and conjunctions to
 " nobreakable ones
-nmap ,s J:%s:\(\_^\\|[ („]\)\([aAiIoOuUwWzZ]\) :\1\2<Char-0xa0>:g<CR>gqap
+nmap <Leader>s J:%s:\(\_^\\|[ („]\)\([aAiIoOuUwWzZ]\) :\1\2<Char-0xa0>:g<CR>gqap
 
 " Use gs for fugitive-Gstatus
-map ,gs :Gstatus<CR>
+map <Leader>gs :Gstatus<CR>
 
 " Use hs for Lawrencium-Hgstatus
-map ,hs :Hgstatus<CR>
+map <Leader>hs :Hgstatus<CR>
 
 " map for fugitive-Glog
-map ,gl :Glog<CR>
+map <Leader>gl :Glog<CR>
 
 " Tabularize maps
 nmap <Leader>a= :Tabularize /=<CR>
