@@ -115,7 +115,7 @@ set updatecount=50
 set wildmode=list:longest,full
 
 " Ignore tmp, lib, vcs, and build related files
-set wildignore+=*/tmp/*,*.so,*.swp
+set wildignore+=*.so,*.swp
 let g:ctrlp_user_command = {
             \ 'types': {
               \ 1: ['.git', 'cd %s && git ls-files'],
