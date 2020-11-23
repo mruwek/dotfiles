@@ -25,6 +25,7 @@ Plug 'tpope/vim-speeddating'
 " general purpose
 Plug 'Konfekt/FastFold'
 Plug 'godlygeek/tabular'
+Plug 'milkypostman/vim-togglelist'
 " vcs related
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
